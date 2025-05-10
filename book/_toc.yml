@@ -37,15 +37,13 @@ parts:
     - file: route_60.md
     - file: faq.md
     - file: feedback.md
-  - caption: Course Chains
+  - caption: Construction Mechanics
     chapters:
-    - file: construction_mechanics/construction_mechanics.md
+    - file: construction_mechanics/cm1/cm1.md
       sections:
-      - file: construction_mechanics/cm1/cm1.md
-        sections:
-          - file: construction_mechanics/cm1/pre_reqs.md
-          - file: construction_mechanics/cm1/summary.md
-          - file: construction_mechanics/cm1/diag_test.md
-          - file: construction_mechanics/cm1/practice_exercises.md
-      - file: construction_mechanics/cm2/cm2.md
-      - file: construction_mechanics/cm3/cm3.md
+        - file: construction_mechanics/cm1/pre_reqs.md
+        - file: construction_mechanics/cm1/summary.md
+        - file: construction_mechanics/cm1/diag_test.md
+        - file: construction_mechanics/cm1/practice_exercises.md
+    - file: construction_mechanics/cm2/cm2.md
+    - file: construction_mechanics/cm3/cm3.md
