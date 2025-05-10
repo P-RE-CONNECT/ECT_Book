@@ -37,7 +37,6 @@ parts:
     - file: route_60.md
     - file: faq.md
     - file: feedback.md
-    - file: course_chains.md
   - caption: Construction Mechanics
     chapters:
     - file: construction_mechanics/construction_mechanics.md
