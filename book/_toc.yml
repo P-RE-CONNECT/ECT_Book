@@ -32,6 +32,15 @@ parts:
   - caption: Contents
     chapters:
     - file: start_here.md
-    - file: references.md
-    - file: changelog.md
-    - file: credits.md
+    - file: course_chains.md
+      sections:
+      - file: construction_mechanics/construction_mechanics.md
+        sections:
+        - file: construction_mechanics/cm1/cm1.md
+        - file: construction_mechanics/cm2/cm2.md
+        - file: construction_mechanics/cm3/cm3.md
+    - file: diagnostic_tests.md
+    - file: course_map.md
+    - file: route_60.md
+    - file: faq.md
+    - file: feedback.md
