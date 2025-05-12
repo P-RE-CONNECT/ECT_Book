@@ -3,7 +3,7 @@ author: The P-RE-CONNECT Team
                                                      # Replace TeachBooks Teams with your own name in the line above
 
 execute:
-  execute_notebooks: "off"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build
+  execute_notebooks: "auto"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build
 
 only_build_toc_files: true                           # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents
 
