@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subsurface</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+    #c {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const svg = d3.select("body")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", 200)
+      .style("border", "1px solid #ccc");
+
+    const info = d3.select("body")
+      .append("div")
+      .attr("id", "info")
+      .style("margin-top", "20px")
+      .style("font-family", "sans-serif");
+
+    const blocks = [
+      { id: "block1", x: 50, y: 50, text: "CM1", info: "Construction Mechanics 1" },
+      { id: "block2", x: 200, y: 50, text: "CM2", info: "Construction Mechanics 2" },
+      { id: "block3", x: 350, y: 50, text: "CM3", info: "Construction Mechanics 3" }
+    ];
+
+    const arrows = [
+      { id: "arrow1", x1: 150, y1: 75, x2: 200, y2: 75, info: "Construction Mechanics 1 => Construction Mechanics 2" },
+      { id: "arrow2", x1: 300, y1: 75, x2: 350, y2: 75, info: "Construction Mechanics 2 => Construction Mechanics 3" }
+    ];
+
+    // Define arrowhead marker
+    svg.append("defs")
+      .append("marker")
+      .attr("id", "arrowhead")
+      .attr("markerWidth", 10)
+      .attr("markerHeight", 7)
+      .attr("refX", 10)
+      .attr("refY", 3.5)
+      .attr("orient", "auto")
+      .attr("markerUnits", "strokeWidth")
+      .append("polygon")
+      .attr("points", "0 0, 10 3.5, 0 7")
+      .attr("fill", "black");
+
+    // Draw blocks
+    blocks.forEach(block => {
+      svg.append("rect")
+        .attr("id", block.id)
+        .attr("x", block.x)
+        .attr("y", block.y)
+        .attr("width", 100)
+        .attr("height", 50)
+        .attr("rx", 15)
+        .attr("fill", "#add8e6")
+        .on("click", () => info.text(block.info));
+
+      svg.append("text")
+        .attr("x", block.x + 50)
+        .attr("y", block.y + 25)
+        .style("text-anchor", "middle")
+        .style("dominant-baseline", "middle")
+        .attr("font-family", "Verdana")
+        .attr("font-size", 12)
+        .attr("fill", "black")
+        .text(block.text)
+        .on("click", () => info.text(block.info));
+    });
+
+    // Draw arrows
+    arrows.forEach(arrow => {
+      svg.append("rect")
+        .attr("id", arrow.id)
+        .attr("x", arrow.x1)
+        .attr("y", arrow.y1 - 15)
+        .attr("width", arrow.x2 - arrow.x1)
+        .attr("height", 30)
+        .attr("fill", "none")
+        .attr("pointer-events", "visible")
+        .on("click", () => info.text(arrow.info));
+        
+      svg.append("line")
+        .attr("id", arrow.id)
+        .attr("x1", arrow.x1)
+        .attr("y1", arrow.y1)
+        .attr("x2", arrow.x2)
+        .attr("y2", arrow.y2)
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
+        .attr("marker-end", "url(#arrowhead)")
+        .on("click", () => info.text(arrow.info));
+    });
+  </script>
+</body>
+</html>
+
+<!-- <script>
+  async function loadPlot() {
+    try {
+      const res = await fetch('barchart.json');
+      const fig = await res.json();
+      Plotly.newPlot('plotDiv', fig.data, fig.layout || {});
+    } catch (e) {
+      console.error("Error loading plot:", e);
+    }
+  }
+  loadPlot();
+</script> -->
