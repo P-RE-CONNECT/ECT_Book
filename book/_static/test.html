@@ -17,8 +17,21 @@
   </style>
 </head>
 <body>
-    <div>
-        This is some text!
-    </div>
+<canvas id="c">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div id="plotDiv"></div>
+<script>
+  async function loadPlot() {
+    try {
+      const res = await fetch('barchart.json');
+      const fig = await res.json();
+      Plotly.newPlot('plotDiv', fig.data, fig.layout || {});
+    } catch (e) {
+      console.error("Error loading plot:", e);
+    }
+  }
+  loadPlot();
+</script>
+</canvas>
 </body>
 </html>
