@@ -35,6 +35,7 @@ sphinx:                                              # Options passed on to the 
     html_show_copyright: false                       # As the copyright is included in the author field
     html_last_updated_fmt: '%B %-d, %Y'              # Adds the date of the last update to the footer
     html_static_path: ["figures"]                    # Add folder that contain files that need to be included, such as the location of the logo(s)
+    html_extra_path: ["../_static"]
     mathjax3_config:
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier
