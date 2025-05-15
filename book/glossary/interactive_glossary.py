@@ -18,11 +18,11 @@ class Interactive_Glossary:
         # Iterate through the sheet names
         for sheet_name in xls.sheet_names:
             if 'Greek' in sheet_name:
-                self.glossary_greek = pd.read_excel(xls, sheet_name=sheet_name, skiprows=1, index_col=[0,1])
+                self.glossary_greek = pd.read_excel(xls, sheet_name=sheet_name, skiprows=2, index_col=[0,1])
             elif 'Math' in sheet_name:
                 self.glossary_math = pd.read_excel(xls, sheet_name=sheet_name, skiprows=0, index_col=[0,1])
             elif 'Latin' in sheet_name:
-                self.glossary_latin = pd.read_excel(xls, sheet_name=sheet_name, skiprows=1, index_col=0)
+                self.glossary_latin = pd.read_excel(xls, sheet_name=sheet_name, skiprows=2, index_col=0)
             else:
                 raise ValueError(f"Unknown sheet name: {sheet_name}, must be Greek, Math, or Latin")
 
@@ -103,11 +103,13 @@ class Interactive_Glossary:
         
         # Create a multi-select widget for course selection
         courses = list(df.columns)
+        total_courses = len(courses) + (1 if option_all else 0)
+        height = min(250, 20 * total_courses + 10)
         multi_select = widgets.SelectMultiple(
             options=["All"] + courses if option_all else courses,
             value=["All"] if option_all else [courses[0]],
             description='Courses:',
-            layout={'width': '30%', 'height': '200px'},
+            layout={'width': '30%', 'height': f'{height}px'},
         )
 
         # Create a search bar if option_search is enabled
@@ -116,7 +118,7 @@ class Interactive_Glossary:
                 value='',
                 placeholder='Search symbol or description...',
                 description='Search:',
-                layout={'width': '50%'}
+                layout={'width': '30%'}
             )
             
             # Function to filter the DataFrame based on the dropdown selection and search
@@ -186,7 +188,7 @@ class Interactive_Glossary:
                 value='',
                 placeholder='Search symbol or description...',
                 description='Search:',
-                layout={'width': '50%'}
+                layout={'width': '30%'}
             )
             
             def filter_glossary(search_query=""):
