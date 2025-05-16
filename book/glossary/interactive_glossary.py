@@ -85,33 +85,42 @@ class Interactive_Glossary:
 
         # Link the dropdown to the filtering function
         interact(filter_glossary, course=dropdown);
-        
-
-    def MultiCoursePlotly(self, sheet='Greek', option_all=True, option_search=True):
-        """
-        Create an interactive glossary for multiple courses with a multi-select widget.\n
-        `sheet`: str, name of the sheet to select ('Greek', 'Math', or 'Latin').\n
-        `option_all`: bool, whether to include an "All" option in the multi-select.\n
-        `option_search`: bool, whether to include a search bar for filtering.
-        """
-                
+    
+    def MultiCoursePlotly(self, sheet='Greek', option_all_separate=True, option_search=True, option_all_combined=False):
         df = self.SheetSelection(sheet)
-        df.style.set_properties(**{'text-align': 'left'})
-        # Display styling
-        display(HTML(f"<h3>📚 Interactive Glossary of {sheet} Symbols</h3>"))
-        display(HTML("<p>Select one or more courses to filter the symbols and their meanings:</p>"))
-        
-        # Create a multi-select widget for course selection
-        courses = list(df.columns)
-        total_courses = len(courses) + (1 if option_all else 0)
-        height = min(250, 20 * total_courses + 10)
+        df = df.copy()  # Prevent side effects
+
+        # Add 'All combined' column if needed
+        if option_all_combined:
+            if 'All combined' not in df.columns:
+                courses = list(df.columns)
+                df['All combined'] = df.apply(lambda row: ', '.join([str(row[c]) for c in courses if pd.notna(row[c])]), axis=1)
+            courses = [c for c in df.columns if c != 'All combined']  # Exclude duplicate
+        else:
+            courses = list(df.columns)
+
+        # Set options for select (order: All combined, All separate, then courses)
+        options = []
+        default_value = []
+        if option_all_combined:
+            options.append("All combined")
+            default_value.append("All combined")
+        if option_all_separate:
+            options.append("All separate")
+            if not default_value:
+                default_value.append("All separate")
+        options += courses
+        if not default_value:
+            default_value = [courses[0]]
+
+        height = min(250, 20 * (len(options)) + 10)
         multi_select = widgets.SelectMultiple(
-            options=["All"] + courses if option_all else courses,
-            value=["All"] if option_all else [courses[0]],
+            options=options,
+            value=default_value,
             description='Courses:',
             layout={'width': '30%', 'height': f'{height}px'},
         )
-
+        
         # Create a search bar if option_search is enabled
         if option_search:
             search_input = widgets.Text(
@@ -120,55 +129,52 @@ class Interactive_Glossary:
                 description='Search:',
                 layout={'width': '30%'}
             )
-            
-            # Function to filter the DataFrame based on the dropdown selection and search
+
             def filter_glossary(selected_courses, search_query=""):
                 display(HTML("<h4>Filtered Glossary:</h4>"))
-                
                 if not selected_courses:
                     display(HTML("<p>No courses selected.</p>"))
                     return
-                
-                # Handle "All" selection
-                if "All" in selected_courses and option_all:
-                    result_df = df.dropna(how='all').fillna('')
+                # Handle "All separate"
+                if "All separate" in selected_courses and option_all_separate:
+                    # Show only the original course columns (exclude 'All combined')
+                    course_columns = [c for c in df.columns if c != "All combined"]
+                    result_df = df[course_columns].dropna(how='all').fillna('')
+                elif "All combined" in selected_courses and option_all_combined:
+                    result_df = pd.DataFrame(df['All combined'])
+                    result_df = result_df[result_df['All combined'].str.strip() != '']
                 else:
-                    # Collect all symbols and descriptions from the selected courses
-                    courses = [str(course) for course in selected_courses]
-                    result_df = df[courses].dropna(how='all').fillna('')
-                
-                # Apply search filter if option_search is enabled
+                    courses_sel = [str(c) for c in selected_courses]
+                    result_df = df[courses_sel].dropna(how='all').fillna('')
+
                 if search_query:
                     result_df = result_df[result_df.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)]
 
-                # Display the result
                 display(self.df_align(result_df))
-                
-            # Link the multi-select and search to the filtering function
+
             interact(filter_glossary, selected_courses=multi_select, search_query=search_input)
 
         else:
-            # Function without search_query if option_search is False
             def filter_glossary_no_search(selected_courses):
                 display(HTML("<h4>Filtered Glossary:</h4>"))
-                
                 if not selected_courses:
                     display(HTML("<p>No courses selected.</p>"))
                     return
-                
-                # Handle "All" selection
-                if "All" in selected_courses and option_all:
-                    result_df = df.dropna(how='all').fillna('')
+                if "All separate" in selected_courses and option_all_separate:
+                    # Show only the original course columns (exclude 'All combined')
+                    course_columns = [c for c in df.columns if c != "All combined"]
+                    result_df = df[course_columns].dropna(how='all').fillna('')
+                elif "All combined" in selected_courses and option_all_combined:
+                    result_df = pd.DataFrame(df['All combined'])
+                    result_df = result_df[result_df['All combined'].str.strip() != '']
                 else:
-                    # Collect all symbols and descriptions from the selected courses
-                    courses = [str(course) for course in selected_courses]
-                    result_df = df[courses].dropna(how='all').fillna('')
+                    courses_sel = [str(c) for c in selected_courses]
+                    result_df = df[courses_sel].dropna(how='all').fillna('')
 
-                # Display the result
                 display(self.df_align(result_df))
 
-            # Link the multi-select without search
             interact(filter_glossary_no_search, selected_courses=multi_select)
+    
 
     def MathOperatorsPlotly(self, option_search=True):
         """
