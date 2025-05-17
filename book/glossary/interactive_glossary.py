@@ -1,6 +1,7 @@
 import pandas as pd
 from ipywidgets import widgets, interact
 from IPython.display import display, HTML
+import numpy as np
 
 class Interactive_Glossary:
     def __init__(self, glossary_file):
@@ -86,6 +87,49 @@ class Interactive_Glossary:
         # Link the dropdown to the filtering function
         interact(filter_glossary, course=dropdown);
     
+    # def _combine_and_dedup(self, row, courses):
+    #     seen = set()
+    #     result = []
+    #     for col in courses:
+    #         val = row[col]
+    #         if pd.isnull(val):
+    #             continue
+    #         # Split on ',' and strip
+    #         for entry in str(val).split(','):
+    #             entry_stripped = entry.strip()
+    #             entry_norm = entry_stripped.lower()
+    #             if entry_norm and entry_norm not in seen:
+    #                 seen.add(entry_norm)
+    #                 result.append(entry_stripped)
+    #     # Capitalize only the first entry
+    #     if result:
+    #         result[0] = result[0].capitalize()
+    #         for i in range(1, len(result)):
+    #             result[i] = result[i].lower()
+    #     return ', '.join(result)
+    
+    def _combine_and_dedup(self, row, courses):
+        seen = set()
+        result = []
+        for col in courses:
+            val = row[col]
+            if pd.isnull(val):
+                continue
+            for entry in str(val).split(','):
+                entry_stripped = entry.strip()
+                entry_norm = entry_stripped.lower()
+                if entry_norm and entry_norm not in seen:
+                    seen.add(entry_norm)
+                    result.append(entry_stripped)
+        # Alphabetically sort, but preserve original casing (sort using lowercased version)
+        result = sorted(result, key=lambda x: x.lower())
+        # Capitalize only the first entry
+        if result:
+            result[0] = result[0].capitalize()
+            for i in range(1, len(result)):
+                result[i] = result[i].lower()
+        return ', '.join(result)
+    
     def MultiCoursePlotly(self, sheet='Greek', option_all_separate=True, option_search=True, option_all_combined=False):
         df = self.SheetSelection(sheet)
         df = df.copy()  # Prevent side effects
@@ -94,7 +138,7 @@ class Interactive_Glossary:
         if option_all_combined:
             if 'All combined' not in df.columns:
                 courses = list(df.columns)
-                df['All combined'] = df.apply(lambda row: ', '.join([str(row[c]) for c in courses if pd.notna(row[c])]), axis=1)
+                df['All combined'] = df.apply(lambda row: self._combine_and_dedup(row, courses), axis=1)
             courses = [c for c in df.columns if c != 'All combined']  # Exclude duplicate
         else:
             courses = list(df.columns)
