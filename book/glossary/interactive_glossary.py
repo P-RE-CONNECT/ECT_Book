@@ -63,7 +63,7 @@ class Interactive_Glossary:
         
         # Display styling
         display(HTML(f"<h3>📚 Interactive Glossary of {sheet} Symbols</h3>"))
-        display(HTML("<p>Select one or more courses to filter the symbols and their meanings:</p>"))
+        display(HTML("<p>Select a course to filter the symbols and their meanings:</p>"))
 
         df = self.SheetSelection(sheet)
         df.style.set_properties(**{'text-align': 'left'})
@@ -86,27 +86,6 @@ class Interactive_Glossary:
 
         # Link the dropdown to the filtering function
         interact(filter_glossary, course=dropdown);
-    
-    # def _combine_and_dedup(self, row, courses):
-    #     seen = set()
-    #     result = []
-    #     for col in courses:
-    #         val = row[col]
-    #         if pd.isnull(val):
-    #             continue
-    #         # Split on ',' and strip
-    #         for entry in str(val).split(','):
-    #             entry_stripped = entry.strip()
-    #             entry_norm = entry_stripped.lower()
-    #             if entry_norm and entry_norm not in seen:
-    #                 seen.add(entry_norm)
-    #                 result.append(entry_stripped)
-    #     # Capitalize only the first entry
-    #     if result:
-    #         result[0] = result[0].capitalize()
-    #         for i in range(1, len(result)):
-    #             result[i] = result[i].lower()
-    #     return ', '.join(result)
     
     def _combine_and_dedup(self, row, courses):
         seen = set()
@@ -134,6 +113,10 @@ class Interactive_Glossary:
         df = self.SheetSelection(sheet)
         df = df.copy()  # Prevent side effects
 
+        # Display styling
+        display(HTML(f"<h3>📚 Interactive Glossary of {sheet} Symbols</h3>"))
+        display(HTML("<p>Select one or more courses to filter the symbols and their meanings:</p>"))
+        
         # Add 'All combined' column if needed
         if option_all_combined:
             if 'All combined' not in df.columns:
