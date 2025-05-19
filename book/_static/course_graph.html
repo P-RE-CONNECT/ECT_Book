@@ -42,6 +42,14 @@
       { id: "arrow2", x1: 300, y1: 75, x2: 350, y2: 75, info: "Construction Mechanics 2 => Construction Mechanics 3" }
     ];
 
+    const detailedInfo = {
+      block1: "<h1>Construction Mechanics 1</h1>: This course covers the basics of construction mechanics, including forces, moments, and equilibrium.",
+      block2: "Construction Mechanics 2: This course builds on CM1, introducing stress, strain, and material properties.",
+      block3: "Construction Mechanics 3: This course focuses on advanced topics like structural analysis and dynamics.",
+      arrow1: "Construction Mechanics 1 => Construction Mechanics 2: This arrow represents the progression from CM1 to CM2.",
+      arrow2: "Construction Mechanics 2 => Construction Mechanics 3: This arrow represents the progression from CM2 to CM3."
+    };
+
     // Define arrowhead marker
     svg.append("defs")
       .append("marker")
@@ -75,7 +83,7 @@
         .on("click", function () {
           clearBorders();
           d3.select(this).attr("stroke", "red").attr("stroke-width", 2);
-          info.text(block.info);
+          info.text(detailedInfo[block.id]);
         });
 
       svg.append("text")
@@ -90,7 +98,7 @@
         .on("click", function () {
           clearBorders();
           d3.select(`#${block.id}`).attr("stroke", "red").attr("stroke-width", 2);
-          info.text(block.info);
+          info.text(detailedInfo[block.id]);
         });
     });
 
@@ -107,7 +115,7 @@
         .on("click", function () {
           clearBorders();
           d3.select(`#${arrow.id}`).attr("stroke", "red").attr("stroke-width", 2);
-          info.text(arrow.info);
+          info.text(detailedInfo[arrow.id]);
         });
         
       svg.append("line")
