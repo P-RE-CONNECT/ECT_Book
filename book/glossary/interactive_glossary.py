@@ -14,7 +14,7 @@ class Interactive_Glossary:
         self.glossary_greek = None
 
         # Load the Excel file
-        xls = pd.ExcelFile(glossary_file)
+        xls = pd.ExcelFile(glossary_file, engine='openpyxl')
 
         # Iterate through the sheet names
         for sheet_name in xls.sheet_names:
