@@ -7,6 +7,9 @@ sphinx-exercise
 teachbooks-sphinx-tippy
 sphinx-iframes
 sphinx-named-colors
+pandas
+ipywidgets
+numpy
 
 # Now list the packages you want to download directly from GitHub
 git+https://github.com/TeachBooks/Sphinx-Thebe
