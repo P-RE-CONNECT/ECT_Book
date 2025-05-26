@@ -1,0 +1,43 @@
+﻿,,Year 1,,,,,,,,,,Year 2,,,,,,,,,,,
+,,CTB1001-16,CTB1110-17,CTB1120-17,CTB1215,CTB1220-17,CTB1002-D1,CTB1310,CTB1320-24,CTB1410-20,CTB1420-14,CTB2105,CTB2110,CTB2121,CTB2200,CTB2210,CTB2220-14,CTB2300,CT2310,CTB2320-17,CTB2400,CTB2410,CTB2420-17
+Symbol,Name,Analyse,Constructie Mechanica 1,Inleiding Civiele & Milieutechniek,Schone Watersystemen,Integraal Ontwerpen,Lineaire Algebra,Constructie Mechanica 2,Bouwmaterialen & Milieu,Ontwerpen van Constructies & Funderingen 1,Transport & Planning,Differentiaalvergelijkingen,Vloeistofmechanica,Stedelijk Water en Milieutechniek,Kansrekening & Statistiek,Constructie Mechanica 3,Beton & Staalconstructies,Dynamica van Systemen,Grondmechanica,Ontwerpen van Constructies & Funderingen 2,Numerieke Wisunde,Waterbouwkunde,Hydrologie
+$\alpha$,alpha,,,,,,,,,"Thermal expansion coefficient, emperical base factor",,,Correction factor,Angle,,Thermal expansion coefficient,"Shape factor, reduction factor",,,,,,Drainage parameter
+$\beta$,beta,,,,,,,,,Factor for enlarged pile bases,,,,,,,Reliability index,,,,,,
+$\gamma$,gamma,,,,,,,,Shear angle,Bulk unit weight,,Friction constant,Shear angle,,Confidence level,,Partial factor,,Weight,Weight,,Reduction factor,Psychrometer constant
+$\dot{\gamma}$,gamma dot,,,,,,,,,,,,Shear rate,,,,,,,,,,
+$\delta$,delta,,,,,,,,,Interface friction angle between the soil and pile,,Dirac delta function,,,,,Displacement,Dirac delta function,,,,,
+$\delta \theta$,delta theta,,,,,,,,,,,,,,,Virtual rotation,,,,,,,
+$\Delta$,Delta,Difference,,,,,,,,,,,,,,,,,,,,,
+$\varepsilon$,epsilon,,,,,,,Strain,Strain,Strain,,,,,,Strain,,,Strain,,Error term,,
+$\Epsilon$,Epsilon,,,,,,,Young's modulus,Young's modulus,,,,,,,,,,,,,,
+$\Epsilon_{\lambda}$,Epsilon_lambda,,,,,,,,Eigenspace,,,,,,,,,,,,,,
+$\zeta$,zeta,,,,,,,,,,,,,,,,,Damping ratio,,,,Water level,
+$\eta$,eta,,,,,,,,,,,,"Dynamic viscosity, efficiency",,,,,,,,,Efficiency,Porosity
+$\theta$,theta,(polar) angle (argument of z),,,,,,Angle,,,,,Angle,,,Rotation,Angle,Angle,,,,"Stream parameter, angle",
+$\dot{\theta}$,theta dot,,,,,,,,,,,,,,,,,,,,,,
+$\ddot{\theta}$,theta double dot,,,,,,,,,,,,,,,,,,,,,,
+$\kappa$,kappa,,,,,,,Curvature,,,,,,,,Curvature,Curvature,,Intrinsic permeability,,,,
+$\lambda$,lambda,,,,,,,,Eigenvalue,,,,,,,,Slenderness,,,,"Stability parameter, eigenvalue",,
+$\lambda_w$,lambda_w,,,,,,,,,,,,,,,,,,,,,,Heat/enthalpy of vaporization
+$\mu$,mu,,,,,,,,,Mean,Sensitivity,,Factor for area change (Carnot),"Dynamic viscosity, specific growth rate",Mean,,Mean,,Dynamic viscosity,,,"Dynamic viscosity, factor for area change (carnot)",Storage coefficient
+$\nu$,nu,,,,,,,,Poisson's ratio,,,,Kinematic viscosity,Kinematic viscosity,,,Poisson's ratio,,Poisson's ratio,Poisson's ratio,,Kinematic viscosity,
+$\xi$,xi,,,,,,,,,,,,,,,,,,,,Error term,,
+$\rho$,rho,Density,,,,,,,Density,,,Mass per unit length,Density,Density,Correlation,,"Density, reinforcement ratio",Density,Density,Reinforcement ratio,,Density,Density
+$\sigma$,sigma,,,,,,,Stress,Phase strength,"Stress, standard deviation",,,,,Standard deviation,Normal stress,"Standard deviation, normal stress",,Total stress,Stress,,,
+$\sigma'$,sigma,,,,,,,,Stress at crack tip,,,,,,,,,,Effective stress,Effective stress,,,
+$\sigma^2$,sigma squared,,,,,,,,,,,,,,Variance,,,,,,,,
+$\sigma_o$,sigma,,,,,,,,Stress applied on the surface,,,,,,,,,,,,,,
+$\sigma_v$,sigma,,,,,,,,,Total vertical stress,,,,,,,,,,,,,
+$\sigma_v'$,sigma,,,,,,,,,Vertical effective stress,,,,,,,,,,,,,
+$\sigma_{vf}'$,sigma,,,,,,,,,,,,,,,,,,,Final vertical effective stress,,,
+$\tau$,tau,,,,,,,Shear stress,Shear stress,Shear stress,Angular rotation,,Shear stress,,,Shear stress,Shear stress,,Shear stress,Shear stress,Local error,Bottom friction,
+$\tau_f$,tau,,,,,,,,,Failure shear stress,,,,,,,,,Failure shear stress,,,,
+$\varphi$,phi,Azimuthal angle,,,,,Angle,Rotation,,,,,,,,Rotation,,,,,,,
+$\varphi_0$,phi,,,,,,,,,,,,,,,,,Natural phase,,,,,
+$\phi$,phi,,,,,,,,,Angle of internal friction,,,,,,,Reinforcement diameter,,"Potential, friction angle",,,Transport parameter,
+$\phi'$,phi,,,,,,,,,,,,,,,,,,,Friction angle,,,
+$\chi$,chi,,,,,,,,,,,,,,,,Reduction factor,,,,,,
+$\psi$,psi,,,,,,,,,,,,,,,,Combination factor,,Stream function,,,Shields parameter,
+$\omega$,omega,,,,,,,,,,Shock wave speed,Angular frequency,,,,,,Frequency,,,,Angular frequency,
+$\omega_0$,omega,,,,,,,,,,,,,,,,,Natural frequency,,,,,
+$\Omega$,Omega,,,,,,,,,,,,,,Sample space,,,,,,,,

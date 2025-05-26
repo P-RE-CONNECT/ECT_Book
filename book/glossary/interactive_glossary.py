@@ -13,19 +13,23 @@ class Interactive_Glossary:
         self.glossary_file = glossary_file
         self.glossary_greek = None
 
-        # Load the Excel file
-        xls = pd.ExcelFile(glossary_file, engine='openpyxl')
+        # # Load the Excel file
+        # xls = pd.ExcelFile(glossary_file, engine='openpyxl')
 
-        # Iterate through the sheet names
-        for sheet_name in xls.sheet_names:
-            if 'Greek' in sheet_name:
-                self.glossary_greek = pd.read_excel(xls, sheet_name=sheet_name, skiprows=2, index_col=[0,1])
-            elif 'Math' in sheet_name:
-                self.glossary_math = pd.read_excel(xls, sheet_name=sheet_name, skiprows=0, index_col=[0,1])
-            elif 'Latin' in sheet_name:
-                self.glossary_latin = pd.read_excel(xls, sheet_name=sheet_name, skiprows=2, index_col=0)
-            else:
-                raise ValueError(f"Unknown sheet name: {sheet_name}, must be Greek, Math, or Latin")
+        # # Iterate through the sheet names
+        # for sheet_name in xls.sheet_names:
+        #     if 'Greek' in sheet_name:
+        #         self.glossary_greek = pd.read_excel(xls, sheet_name=sheet_name, skiprows=2, index_col=[0,1])
+        #     elif 'Math' in sheet_name:
+        #         self.glossary_math = pd.read_excel(xls, sheet_name=sheet_name, skiprows=0, index_col=[0,1])
+        #     elif 'Latin' in sheet_name:
+        #         self.glossary_latin = pd.read_excel(xls, sheet_name=sheet_name, skiprows=2, index_col=0)
+        #     else:
+        #         raise ValueError(f"Unknown sheet name: {sheet_name}, must be Greek, Math, or Latin")
+        
+        self.glossary_greek = pd.read_csv('Glossary_CT_Greek.csv', skiprows=2, index_col=[0,1])
+        self.glossary_math = pd.read_csv('Glossary_CT_Math.csv', skiprows=0, index_col=[0,1])
+        self.glossary_latin = pd.read_csv('Glossary_CT_Latin.csv', skiprows=2, index_col=0)        
 
     def SheetSelection(self, sheet='Greek'):
         """

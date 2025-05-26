@@ -1,0 +1,170 @@
+﻿,Year 1,,,,,,,,,,Year 2,,,,,,,,,,,
+,CTB1001-16,CTB1110-17,CTB1120-17,CTB1215,CTB1220-17,CTB1002-D1,CTB1310,CTB1320-24,CTB1410-20,CTB1420-14,CTB2105,CTB2110,CTB2121,CTB2200,CTB2210,CTB2220-14,CTB2300,CT2310,CTB2320-17,CTB2400,CTB2410,CTB2420-17
+Symbol,Analyse,Constructie Mechanica 1,Inleiding Civiele & Milieutechniek,Schone Watersystemen,Integraal Ontwerpen,Lineaire Algebra,Constructie Mechanica 2,Bouwmaterialen & Milieu,Ontwerpen van Constructies & Funderingen 1,Transport & Planning,Differentiaalvergelijkingen,Vloeistofmechanica,Stedelijk Water en Milieutechniek,Kansrekening & Statistiek,Constructie Mechanica 3,Beton & Staalconstructies,Dynamica van Systemen,Grondmechanica,Ontwerpen van Constructies & Funderingen 2,Numerieke Wisunde,Waterbouwkunde,Hydrologie
+$a$,,,,,,Real part,Distance,Crack length,,Acceleration,,"Acceleration, distance",,,,Weld throat,Acceleration,Radius of footing,,Left boundary,,Distance
+$a_m$,,,,,,,,,,,Fourier constant,,,,,,,,,,,
+$a_n$,,,,,,,,,,,,,,,,,Fourier constant,,,,,
+$A$,,,,,,Matrix,Area,Atomic mass,Area,Parameter for clotoïde,,,Area,,,"Accidental loading, area","Amplitude, area",Area,Area,Matrix,Area,Area
+$A^T$,,,,,,Matrix transpose,,,,,,,,,,,,,,,,
+$b$,,,,,,Imaginary part,Width,,Width,,,Width,,,,Width,,,"Factors for inclination of foundation base, width",Right boundary,Bottom elevation,
+$\vec{b}$,,,,,,Vector b,,,,,,,,,,,,,,,,
+$b_m$,,,,,,,,,,,Fourier constant,,,,,,,,,,,
+$b_n$,,,,,,,,,,,,,,,,,Fourier constant,,,,,
+$B$,,,,,,,,,,Benefits,,,Width,,,,Cross sectional area,Thickness of flow plane,Width,,Width,
+$B_a$,,,,,,,,,Pore pressure ratio,,,,,,,,,,,,,
+$c$,Damping coefficient,,,,,,,,Cohesion,Capacity,,,,,,Concrete cover,,"Compression constant, cohesion",,Support point,Phase velocity,
+$c_d$,,,,,,,,,,,,,Drag coefficient,,,,,,,,,
+$c_g$,,,,,,,,,,,,,,,,,,,,,Group velocity,
+$c_v$,,,,,,,,,,,,,,,,,,Consolidation coefficient,,,,
+$c_w$,,,,,,,,,,,,,,,,,,,,,Coefficient of resistance,
+$C$,,,,,,,,,,,,,Concentration,,,,,Clay,,Error approximation,,"Chézy coefficient, runoff coefficient, capillary rise"
+$C_1$,,,,,,,,,,,,,,,,,,,Depth correction factor,,,
+$C_2$,,,,,,,,,,,,,,,,,,,Creep correction factor,,,
+$C_c$,,,,,,,,,,,,,,,,,,,Compression index,,,
+$C_f$,,,,,,,,,,,,,,,,,,,,,Skin friction coefficient,
+$C_h$,,,,,,,,,,,,,,,,,,,,,Chézy coefficient,
+$C_p$,,,,,,,,,,,,,,,,,,,,,,Specific heat capacity
+$C_r$,,,,,,,,,,,,,,,,,,,Recompression index,,,Reduction coefficient
+$C_u$,,,,,,,,,,,,,,,,,,Uniformity coefficient,,,,
+$C_{aq}$,,,,,,,,,,,,,,,,,,,,,,Volumetric heat capacity of aquifer
+$C_w$,,,,,,,,,,,,,,,,,,,,,,Volumetric heat capacity of water
+$Col A$,,,,,,Column space of a matrix,,,,,,,,,,,,,,,,
+$Cov$,,,,,,,,,,,,,,Covariance,,,,,,,,
+$d$,,,,,,,,Diameter,"Effective height, diameter",,,Depth,Depth,,,"Diameter, effective height, design",,,,,,
+$D$,"Discriminant, domain",,,,,,,,Diameter,,,Diameter,Deficit,,,,,"Diameter, depth",,,"Depth, diameter, width","Depth, layer thickness"
+$D_r$ ,,,,,,,,,Relative density,,,,,,,,,,,,,
+$e$,,,,,,,Eccentricity,,,,,,,,,,,Void ratio,"Void ratio, eccentricity",Global error,,
+$E$,,,,,,,Young's modulus,Young's modulus,Young's modulus,,,Energy,,Expectation,,"Effects, young's modulus",Energy,Young's modulus,Young's modulus,,Energy,Evaporation
+$E_k$,,,,,,,,,,,,Kinetic energy,,,,,,,,,Kinetic energy,
+$E_p$,,,,,,,,,,,,Potential energy,,,,,,,,,Potential energy,
+$EA$,,,,,,,Tensile stiffness,,,,,,,,Tensile stiffness,,,,,,,
+$EI$,,,,,,,Bending stiffness,,Bending stiffness,,,,,,Bending stiffness,,Bending stiffness,,Bending stiffness,,,
+$f$,Function,,,,,,,,,,,,,Probability density function,,Strength,,Seepage force,,Function,Probability density,
+$\vec{f}$,,,,,,,,,,,,,,,,,Force vector,,,Force vector,,
+$f_cs$,,,,,,,,,Sleeve/side friction,,,,,,,,,,,,,
+$f_v$,,,,,,,,Volume fraction,,,,,,,,,,,,,,
+$f_y$,,,,,,,,,,,,,,,,Yield strength,,,Yield strength,,,
+$F$,,,,,,,Force,,Force,,,Force,Force,Cumulative probability function,Force,Force,Force,Force,Force,,"Probability distribution, froce",Flux
+$F_A$,,,,,,,,,,,,Archimedes force,,,,,,,,,,
+$F_k$,,,,,,,,,,,,,,,Buckling force,,,,,,,
+$F_o$,,,,,,,,,,,Amplitude driving force,,,,,,,,,,,
+$F_r$,,,,,,,,,,,,Froude number,,,,,,,,,,
+$F_t$,,,,,,,,,,,Tension,,,,,,,,,,,
+$FM$,,,,,,,,Fineness modulus,,,,,,,,,,,,,,
+$g$,,,,,,,,,,,,Gravitational acceleration,Gravitational acceleration,,,,Gravitational acceleration,Gravitational acceleration,,,Gravitational acceleration,
+$G$,,,,,,,,Shear modulus,,,,,,,,"Permanent loading, shear modulus",,"Gravel, shear modulus",Shear modulus,,,
+$h$,,,,,,,Height,,Height,"Height, mean following time",,Hydraulic/piezometric head,Head,,Height,,Water elevation,Head,"Horizontal displacement, height",Step size,Head,"Water level, head, relative humidity"
+$\Delta h$,,,,,,,,,,,,Head difference,,,,,,,,,,
+$H$,,,,,,,,,Depth,Height,,"Energy height, horizontal solution","Energy height, height",Hypothesis,,,"Heaviside step function, water level","High plasticity, height",Thickness,,Wave height,Water level
+$\Delta H_w$,,,,,,,,,,,,,,,,,,,,,,
+$i$,Imaginary unit,,,,,Imaginary unit,,,,"Discount rate, gradient",,Slope,,,,Radius of gyration,Imaginary unit,Hydraulic gradient,Factor for inclined load,,Gradient,Energy gradient
+$i_b$,,,,,,,,,,,,Bottom slope,,,,,,,,,,
+$i_f$,,,,,,,,,,,,Friction slope,,,,,,,,,,
+$i_w$,,,,,,,,,,,,Water surface slope,,,,,,,,,,
+$I$,,,,,,Identify matrix,,,Mass moment of inertia,,,,Intensity,,Mass moment of inertia,Mass moment of inertia,,,Mass moment of inertia,,,"Average rainfall intensity, infiltration"
+$I_p$,,,,,,,Polar moment of inertia,,,,,,,,,,,,,,,
+$I_s$,,,,,,,,,,,,,,,,,,,Influence factor,,,
+$I_t$,,,,,,,,,,,,,,,,Torsional moment of inertia,,,,,,
+$I_w$,,,,,,,,,,,,,,,,Warping constant,,,,,,
+$I_{x}$,Moment of inertia around the x-axis,,,,,,,,,,,,,,,,,,,,,
+$I_{y}$,Moment of inertia around the y-axis,,,,,,,,,,,,,,,,,,,,,
+$I_{yy}$,,,,,,,Moment of inertia around z-axis,,,,,,,,Mass inertia around z-axis,Mass inertia around z-axis,,,,,,
+$I_{z}$,Moment of inertia around the z-axis,,,,,,,,,,,,,,,,,,,,,
+$I_{zz}$,,,,,,,Moment of inertia around the y-axis,,,,,,,,Mass inertia around y-axis,Mass inertia around y-axis,,,,,,
+$IQR$,,,,,,,,,,,,,,Interquartile range,,,,,,,,
+$J$,,,,,,,,,,,,,,,,,Rotational inertia,,,,,
+$\mathbf{J}$,,,,,,,,,,,,,,,,,,,,Jacobian matrix,,
+$k$,,,,,,,,,Operational earth pressure coefficient,Density,Spring constant,Von Karmen constant,Efficiency per step,,Spring stiffness,Characteristic,Spring constant,Hydraulic conductivity,,Order derivative,Wave number,"Permeability, residence time"
+$k_d$,,,,,,,,,,,,,Conversion speed,,,,,,,,,
+$k_z$,,,,,,,,,,,,,,,,,,,,,,Permeability coefficient
+$k_0$,,,,,,,,,Coefficient for earth pressure at rest,,,,,,,,,,,,,
+$K$,,,,,,,,,,Costs,,,Total efficiency,,,Correction factor,Kinetic energy,"Bulk modulus, coefficient of lateral earth pressure",,Runge-Kutta 4 constant,,Conversion coefficient
+$\mathbf{K}$,,,,,,,,,,,,,,,,,Stiffness matrix,,,Stiffness matrix,,
+$l$,,,,,,,Length,Length,Length,,,,,Log-likelihood,Length,Length,Length,,"Length, span",,,
+$l_k$,,,,,,,,,Buckling Length,,,,,,Buckling length,,,,,,,
+$\Delta l$,,,,,,,Length difference,,,,,,,,,Length difference,,,,,,
+$L$,,,,,,,,,,Length,,Length,Length,Likelihood function,Length,Length,,"Low plasticity, length",Length,Linear interpolation,"Length, phase period","Length, infiltration"
+$\mathcal{L}$,,,,,,,,,,,Laplace transform,,,,,,Lagrangian,,,,,
+$m$,Mass,,,,,Number of rows in a matrix,,Mass,,Mass,Mass,Mass,,,,,Mass,,,,Mass,
+$m_v$,,,,,,,,,,,,,,,,,,Compressibility coefficient,Compressibility coefficient,,,
+$M$,,,,,,,Moment/torsion,,Moment,,,Mild solution,,,Moment,,"Moment, inertia of the water",Silt,Moment,,Moment,
+$\mathbf{M}$,,,,,,,,,,,,,,,,,Mass matrix,,,Mass matrix,,
+$M_t$,,,,,,,Torsional moment,,,,,,,,,,,,,,,
+$n$,,,,,,Number of columns in a matrix,,Number of atoms,,,Order of ODE,,"Mol gas molecules, number of steps",Number of datapoints,Ratio between $F_k$ and $F$,"Ratio between $F_k$ and $F$, relative normal force",,"Porosity, length perpendicular to flow",,"Order, number of steps",,
+$nul A$,,,,,,Null space of a matrix,,,,,,,,,,,,,,,,
+$\textbf{n}$,,,,,,,,,,,,,,,,,,,,,,
+$N$,,,,,,,Normal force,,,,,,,Normal distribution,,Normal force,,,Bearing capacity factors depending on friction angle normal force,,,"Rainfall, number of extremes"
+$N_A$,,,,,,,,Avogadro's number,,,,,,,,,,,,,,
+$N_q$,,,,,,,,,Bearing capacity factor,,,,,,,,,,,,,
+$O$,,,,,,,,,,,,,,,,,,Organic,,,,
+$p$,,,,,,,,,,Centripetal force,,Pressure,Pressure,Probability,,,,"Pore water pressure, bearing capacity",,,,Probability of exceedance
+$P$,,,,,,,,,Pressure,Probability,,Pressure,Pressure,Probability,,Probability,Potential energy,Poorly graded,,,"Probability, power",Precipitation
+$P_n$,,,,,,,,,,,,,,,,,,,,Taylor polynomial of order n,,
+$P_t$,,,,,,,,,,,,,,,,,,Peat,,,,
+$\mathcal{P}$,,,,,,,,,,,,Power,,,,,,,,,,
+$q$,,,,,,,Distributed load,,,Intensity,,Specific discharge,,,Distributed load,,,"Specific discharge, pressure",Distributed load,,Specific discharge,"Specific discharge, probability of undershooting"
+$\Delta q$,,,,,,,,,,,,,,,,,,,Net force per unit area,,,
+$q_b$,,,,,,,,,Base resistance,,,,,,,,,,,,,
+$q_c$,,,,,,,,,Cone resistance,,,,,,,,,,,,,
+$q_f$,,,,,,,,,,,,,,,,,,,Bearing capacity foundation,,,
+$q_n$,,,,,,,,,Net cone resistance,,,,,,,,,,,,,
+$Q$,,,,,,Quadratic form,,,,,,Discharge,Discharge,,,Variable loading,Discharge,"Discharge, earth pressure",,,Discharge,"Discharge, runoff, flux"
+$Q_b$,,,,,,,,,Base resistance,,,,,,,,,,,Backward differentiation,,
+$Q_c$,,,,,,,,,,,,,,,,,,,,Central differentiation,,
+$Q_f$,,,,,,,,,,,,,,,,,,,,Forward differentiation,,
+$Q_p$,,,,,,,,,,,,,,,,,,,,,,Peak runoff
+$Q_s$,,,,,,,,,Shaft resistance,,,,,,,,,,,,,
+$Q_t$,,,,,,,,,Total capacity,,,,,,,,,,,,,
+$r$,"Modulus or magnitude, radial distance (polar coordinate)",,,,,,,Radius,,,,,"Rate, radius",,,,,Radius,,,Radius,"Radius coordinate, albedo, resistance"
+$R$,,,,,,,Radius (of curvature),,Resistance,Arc radius,,Hydraulic radius,"Rainfall, universal gas constant",,Radius (of curvature),Resistance,,Radius of pumped area,,Truncation error,,"(Hydraulic) radius, percolation"
+$RD$,,,,,,,,,,,,,,,,,,Relative density,,,,
+$Re$,,,,,,,,,,,Real part,Reynolds number,Reynolds number,,,,,,,Real part,Reynolds number,
+$R_B$,,,,,,,,,,,,,,,,,,,,,,Outgoing long wave radiation
+$R_C$,,,,,,,,,,,,,,,,,,,,,,Incoming short wave radiation
+$R_f$,,,,,,,,,Friction ratio,,,,,,,,,,,,,
+$R_h$,,,,,,,,,,,,,,,,,,,,,,Hydraulic radius
+$R_L$,,,,,,,,,,,,,,,,,,,,Left rectangle rule,,
+$R_n$,,,,,,,,,,,,,,,,,,,,Error in Taylor polynomial,,
+$R_N$,,,,,,,,,,,,,,,,,,,,,,Netto radiation on earth
+$R_R$,,,,,,,,,,,,,,,,,,,,Right rectangle rule,,
+$s$,,,,,,,,,Cross-sectional shape reduction factor,,,,Substrate,,,,,Length in direction of flow,,,,"Energy gradient, storage coefficient"
+$s_h$,,,,,,,Horizontal shear flow,,,,,,,,,,,,,,,
+$S$,Riemann sum,,,,,,,Total surface energy,Load,Mean following distance,,"Area, steep solution",,,,First moment of inertia,,"Sand, degree of saturation, shape factor",Factors for shape of foundation base,,Sediment transport,"Degree of saturation, storage"
+$S_a$,,,,,,,,,Static moment,,,,,,,,,,,,,
+$S_i$,,,,,,,,,,,,,,,,,,,Initial settlement,,,
+$S_k$,,,,,,,,,,,,,,,,,,,,Cubic splines,,
+$S_n$,,,,,,,,,,,,,,Sample standard deviation,,,,,,,,
+$S_p$,,,,,,,,,,,,,,Node-sum-of-squares,,,,,,,,
+$S_u$,,,,,,,,,Undrained strenght,,,,,,,,,,,,,
+$S_z$,,,,,,,First moment of inertia (static moment),,,,,,,,,,,,,,,
+$SLS/BGT$,,,,,,,,,Serviceability limit state,,,,,,,Serviceability limit state,,,,,,
+$t$,,,,,,,Thickness,,,Time,Time,,Time,Estimate,,Thickness,Time,Time,,,Time,"Time, temperature"
+$\Delta t$,,,,,,,,,,,,,,,,,,,,Time step size,,Time step
+$T$,,,,,,Transformation,Moment/torsion,Temperature,Temperature,Period,"Period, temperature",,"Temperature, time period",Estimator,"Temperature, torsion",,Period,,,Trapezium rule,Period,"Period, temperature, transpiration"
+$T_0$,,,,,,,,,,,,,,,,,Natural period,,,,,
+$u$,,,,,,,Displacement,,Pore water pressure,Mean velocity,Displacement,Flow velocity,,,Displacement,,Displacement,,Displacement,,Flow velocity,
+$\textbf{U}$,,,,,,,,,,,,,,,,,,,,,,
+$\vec{u}$,,,,,,,,,,,,,,,,,Displacement vector,,,,,
+$\dot{u}$,,,,,,,,,,,,,,,,,Velocity,,,,,
+$\ddot{u}$,,,,,,,,,,,,,,,,,Acceleration,,,,,
+$ULS/UGT$,,,,,,,,,Ultimate limit state,,,,,,,Ultimate limit state,,,,,,
+$v$,,,,,,,,,,Design velocity,,Velocity,Velocity,,,Shear strength,,,Shear strength,,,Velocity
+$\vec{v}$,,,,,,Eigenvector,,,,,,,,,,,,,,,,
+$V$,Volume,,,,,,Shear force,Volume,Shear force,Usefulness of alternative,,Volume,Volume,,Shear force,,,Volume,Shear force,,,"Evaporation, volume"
+$w$,,,,,,,Displacement,Moisture content,Displacement,,,,,,Displacement,Crack width,,,,,,
+$w_n$,,,,,,,,,,,,,,,,,,,,Numerical approximation,Width,
+$W$,,,,,,,,,Section modulus,,,Work,,,,Section modulus,Loss factor,"Well graded, weight",Section modulus,,Resistance,
+$W_{y}$,,,,,,,,,,,,,,,,,,,,,,
+$W_{yy}$,,,,,,,,,,,,,,,,,,,,,,
+$W_{z}$,,,,,,,,,,,,,,,,,,,,,,
+$W_{zz}$,,,,,,,,,,,,,,,,,,,,,,
+$x$,,,,,,,,,Compression zone,,,,,Random variable,,,,,,Real answer x,,
+$\bar{x}$,x-coordinate of center of mass,,,,,,,,,,,,,Average of RV,,,,,,,,
+$\hat{x}$,,,,,,,,,,,,,,,,,,,,Approximation of x,,
+$\vec{x}$,,,,,,Vector x,,,,,,,,,,,,,,,,
+$x_u$,,,,,,,,,,,,,,,,Height of concrete compression zone,,,,,,
+$X$,,,,,,,,,,,,,Biomass concentration,,,,,,,,,
+$\bar{y}$,y-coordinate of center of mass,,,,,,,,,,,,,,,,,,,,,
+$Y$,,,,,,,,,,,,,Yield,,,,,,,,,
+$z$,,,,,,,Distance,,,Reference viewing distance,,Distance,Valence,,,Internal lever arm,,Elevation,Layer thickness,,,Elevation
+$Z$,,,,,,,,,,,,,Height,,,Performance function,,,,,,
