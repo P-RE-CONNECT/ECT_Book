@@ -4,13 +4,13 @@ from IPython.display import display, HTML
 import numpy as np
 
 class Interactive_Glossary:
-    def __init__(self, glossary_file):
+    def __init__(self):
         """
         Initialize the Interactive_Glossary class.\n
         `glossary_file`: str, path to the Excel file containing the glossary.
         """
         
-        self.glossary_file = glossary_file
+        # self.glossary_file = glossary_file
         self.glossary_greek = None
 
         # # Load the Excel file
