@@ -1,0 +1,3 @@
+How to build book locally:
+conda activate teachbooks
+teachbooks build C:\Users\werel\Documents\P-RE-CONNECT\ECT_Book\book

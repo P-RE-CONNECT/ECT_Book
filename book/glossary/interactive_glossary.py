@@ -141,11 +141,14 @@ class Interactive_Glossary:
             default_value = [courses[0]]
 
         height = min(250, 20 * (len(options)) + 10)
+        self.width = 0
+        for option in options:
+            self.width = max(self.width, len(option) * 9 + 20)
         multi_select = widgets.SelectMultiple(
             options=options,
             value=default_value,
             description='Courses:',
-            layout={'width': '30%', 'height': f'{height}px'},
+            layout={'width': f'{self.width}px', 'height': f'{height}px'},
         )
         
         # Create a search bar if option_search is enabled
@@ -154,7 +157,7 @@ class Interactive_Glossary:
                 value='',
                 placeholder='Search symbol or description...',
                 description='Search:',
-                layout={'width': '30%'}
+                layout={'width': f'{self.width}px'}
             )
 
             def filter_glossary(selected_courses, search_query=""):
@@ -221,7 +224,7 @@ class Interactive_Glossary:
                 value='',
                 placeholder='Search symbol or description...',
                 description='Search:',
-                layout={'width': '30%'}
+                layout={'width': f'{self.width}px'}
             )
             
             def filter_glossary(search_query=""):
