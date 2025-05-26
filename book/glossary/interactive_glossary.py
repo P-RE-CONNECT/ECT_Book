@@ -7,7 +7,6 @@ class Interactive_Glossary:
     def __init__(self):
         """
         Initialize the Interactive_Glossary class.\n
-        `glossary_file`: str, path to the Excel file containing the glossary.
         """
         
         # self.glossary_file = glossary_file
