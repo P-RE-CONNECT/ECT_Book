@@ -35,7 +35,7 @@ parts:
     - file: diagnostic_tests.md
     - file: course_map.md
     - file: route_60.md
-    - file: glossary/interactive_glossary.ipynb
+    - file: glossary/glossary.md
 
   - caption: Construction Mechanics
     chapters:

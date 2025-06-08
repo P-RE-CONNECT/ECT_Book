@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        select {
+            margin-bottom: 20px;
+            padding: 8px;
+            font-size: 16px;
+            background-color: #2d4bc2;
+            border-color: #1432aa;
+        }
+
+    </style>
+
+
+<select id="glossary-select">
+    <option value="all_courses">All courses</option>
+    <option value="glossary/1">Course 1</option>
+</select>
+
+<table id="all_courses_table">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Use</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be populated here -->
+    </tbody>
+</table>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script> 
+
+    fetch('Glossary_CT_Math.json')
+        .then(response => response.json())
+        .then(data => {
+            const tbody = document.getElementById('all_courses_table').querySelector('tbody');
+            tbody.innerHTML = ''; // Clear existing content
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td>\\(${row.Symbol}\\)</td><td>${row.Name}</td><td>${row.Use}</td>`;
+                tbody.appendChild(tr);
+            });
+
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        })
+        .catch(error => console.error('Error fetching glossary data:', error));
+
+    document.getElementById('glossary-select').addEventListener('change', function() {
+        var selectedValue = this.value;
+        var allCourses = document.getElementById('all_courses_table');
+        
+        if (selectedValue === 'all_courses') {
+            allCourses.style.display = 'table';
+        } else {
+            allCourses.style.display = 'none';
+        }
+    });
+</script>
