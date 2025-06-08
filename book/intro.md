@@ -1,7 +1,7 @@
 (intro)=
 # Welcome to P-RE-CONNECT!
 
-Welcome to the Civil Engineering P-RE-CONNECT book. In this book, P-RE-CONNECT helps you Prepare, Repair, and Connect courses. The only course chain currently implemented is Construction Mechanics. 
+Welcome to the Earth, Climate and Technology P-RE-CONNECT book. In this book, P-RE-CONNECT helps you Prepare, Repair, and Connect courses. The only course chain currently implemented is Construction Mechanics. 
 
 ### Prepare
 - Look through the prerequisites for a course to see if you are well prepared.

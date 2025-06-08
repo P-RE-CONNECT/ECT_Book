@@ -37,26 +37,20 @@ parts:
     - file: route_60.md
     - file: glossary/glossary.md
 
-  - caption: Construction Mechanics
+  - caption: Physics & Chemistry
     chapters:
-    - file: construction_mechanics/cm1/cm1.md
+    - file: physics_chemistry/mechanics_thermodynamics/mechanics_thermodynamics.md
       sections:
-        - file: construction_mechanics/cm1/pre_reqs.md
-        - file: construction_mechanics/cm1/summary.md
-        - file: construction_mechanics/cm1/diag_test.md
-        - file: construction_mechanics/cm1/practice_exercises.md
-    - file: construction_mechanics/cm2/cm2.md
+        - file: physics_chemistry/mechanics_thermodynamics/pre_reqs.md
+        - file: physics_chemistry/mechanics_thermodynamics/summary.md
+        - file: physics_chemistry/mechanics_thermodynamics/diag_test.md
+        - file: physics_chemistry/mechanics_thermodynamics/practice_exercises.md
+    - file: physics_chemistry/chemistry/chemistry.md
       sections:
-        - file: construction_mechanics/cm2/pre_reqs.md
-        - file: construction_mechanics/cm2/summary.md
-        - file: construction_mechanics/cm2/diag_test.md
-        - file: construction_mechanics/cm2/practice_exercises.md
-    - file: construction_mechanics/cm3/cm3.md
-      sections:
-        - file: construction_mechanics/cm3/pre_reqs.md
-        - file: construction_mechanics/cm3/summary.md
-        - file: construction_mechanics/cm3/diag_test.md
-        - file: construction_mechanics/cm3/practice_exercises.md
+        - file: physics_chemistry/chemistry/pre_reqs.md
+        - file: physics_chemistry/chemistry/summary.md
+        - file: physics_chemistry/chemistry/diag_test.md
+        - file: physics_chemistry/chemistry/practice_exercises.md
 
   - caption: Miscellaneous
     chapters:
