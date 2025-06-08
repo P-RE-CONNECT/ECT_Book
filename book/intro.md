@@ -9,7 +9,7 @@ Welcome to the Earth, Climate and Technology P-RE-CONNECT book. In this book, P-
 
 ### Repair
 - Use the summary to study for course topics
-- Do practice exercises that are on exam level
+- Practice using exam-level exercises
 
 ### Connect
 - Use the [interactive course graph](/course_map.md) to see links between courses
