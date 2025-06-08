@@ -32,22 +32,18 @@
       .style("font-family", "sans-serif");
 
     const blocks = [
-      { id: "block1", x: 50, y: 50, text: "CM1", info: "Construction Mechanics 1" },
-      { id: "block2", x: 200, y: 50, text: "CM2", info: "Construction Mechanics 2" },
-      { id: "block3", x: 350, y: 50, text: "CM3", info: "Construction Mechanics 3" }
+      { id: "block1", x: 50, y: 50, width:200, height:50, text: "Mechanics and Thermodynamics", info: "Mechanics and Thermodynamics" },
+      { id: "block2", x: 300, y: 50, width:200, height:50, text: "Chemistry for Earth Sciences", info: "Chemistry for Earth Sciences" },
     ];
 
     const arrows = [
-      { id: "arrow1", x1: 150, y1: 75, x2: 200, y2: 75, info: "Construction Mechanics 1 => Construction Mechanics 2" },
-      { id: "arrow2", x1: 300, y1: 75, x2: 350, y2: 75, info: "Construction Mechanics 2 => Construction Mechanics 3" }
+      { id: "arrow1", x1: 250, y1: 75, x2: 300, y2: 75, info: "Mechanics and Thermodynamics => Chemistry for Earth Sciences" },
     ];
 
     const detailedInfo = {
-      block1: "<h1>Construction Mechanics 1</h1>: This course covers the basics of construction mechanics, including forces, moments, and equilibrium.",
-      block2: "Construction Mechanics 2: This course builds on CM1, introducing stress, strain, and material properties.",
-      block3: "Construction Mechanics 3: This course focuses on advanced topics like structural analysis and dynamics.",
-      arrow1: "Construction Mechanics 1 => Construction Mechanics 2: This arrow represents the progression from CM1 to CM2.",
-      arrow2: "Construction Mechanics 2 => Construction Mechanics 3: This arrow represents the progression from CM2 to CM3."
+      block1: "Mechanics and Thermodynamics: This course covers the principles of mechanics and thermodynamics, essential for understanding physical systems.",
+      block2: "Chemistry for Earth Sciences: This course focuses on chemistry fundamentals that are relevant to Earth sciences.",
+      arrow1: "Mechanics and Thermodynamics => Chemistry for Earth Sciences: This arrow indicates which information from Mechanics and Thermodynamics is relevant for Chemistry for Earth Sciences.",
     };
 
     // Define arrowhead marker
@@ -76,7 +72,7 @@
         .attr("id", block.id)
         .attr("x", block.x)
         .attr("y", block.y)
-        .attr("width", 100)
+        .attr("width", 200)
         .attr("height", 50)
         .attr("rx", 15)
         .attr("fill", "#add8e6")
@@ -87,8 +83,8 @@
         });
 
       svg.append("text")
-        .attr("x", block.x + 50)
-        .attr("y", block.y + 25)
+        .attr("x", block.x + block.width / 2)
+        .attr("y", block.y + block.height / 2)
         .style("text-anchor", "middle")
         .style("dominant-baseline", "middle")
         .attr("font-family", "Verdana")
