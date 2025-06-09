@@ -1,1 +1,0 @@
-# Construction Mechanics 3
