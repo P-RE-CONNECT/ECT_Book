@@ -30,14 +30,14 @@
         }
 
     </style>
-
+</head>
 
 <select id="glossary-select">
-    <option value="all_courses">All courses</option>
+    <option value="math">Math Symbols</option>
     <option value="glossary/1">Course 1</option>
 </select>
 
-<table id="all_courses_table">
+<table id="math_table">
     <thead>
         <tr>
             <th>Symbol</th>
@@ -53,12 +53,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<script> 
+<script>
 
-    fetch('Glossary_CT_Math.json')
+    fetch('glossary_math.json')
         .then(response => response.json())
         .then(data => {
-            const tbody = document.getElementById('all_courses_table').querySelector('tbody');
+            const tbody = document.getElementById('math_table').querySelector('tbody');
             tbody.innerHTML = ''; // Clear existing content
             data.forEach(row => {
                 const tr = document.createElement('tr');
@@ -74,12 +74,12 @@
 
     document.getElementById('glossary-select').addEventListener('change', function() {
         var selectedValue = this.value;
-        var allCourses = document.getElementById('all_courses_table');
+        var math_table = document.getElementById('math_table');
         
-        if (selectedValue === 'all_courses') {
-            allCourses.style.display = 'table';
+        if (selectedValue === 'math') {
+            math_table.style.display = 'table';
         } else {
-            allCourses.style.display = 'none';
+            math_table.style.display = 'none';
         }
     });
 </script>
