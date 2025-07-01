@@ -37,6 +37,21 @@ parts:
     - file: route_60.md
     - file: glossary/glossary.md
 
+  - caption: Mechanics and Thermodynamics
+    chapters:
+    - file: mechanics_thermodynamics/mechanics/mechanics.md
+      sections:
+        - file: mechanics_thermodynamics/mechanics/pre_reqs.md
+        - file: mechanics_thermodynamics/mechanics/summary.md
+        - file: mechanics_thermodynamics/mechanics/diag_test.md
+        - file: mechanics_thermodynamics/mechanics/practice_exercises.md
+    - file: mechanics_thermodynamics/thermodynamics/thermodynamics.md
+      sections:
+        - file: mechanics_thermodynamics/thermodynamics/pre_reqs.md
+        - file: mechanics_thermodynamics/thermodynamics/summary.md
+        - file: mechanics_thermodynamics/thermodynamics/diag_test.md
+        - file: mechanics_thermodynamics/thermodynamics/practice_exercises.md
+
   - caption: Physics & Chemistry
     chapters:
     - file: physics_chemistry/mechanics_thermodynamics/mechanics_thermodynamics.md
