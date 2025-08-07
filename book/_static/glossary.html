@@ -37,7 +37,7 @@
     <option value="glossary/1">Mechanics and Thermodynamics</option>
 </select>
 
-<table id="math_table">
+<table id="math_table" style="display: none;">
     <thead>
         <tr>
             <th>Symbol</th>
@@ -50,7 +50,7 @@
     </tbody>
 </table>
 
-<table id="mechanics_thermodynamics">
+<table id="mechanics_thermodynamics" style="display: none;">
     <thead>
         <tr>
             <th>Symbol</th>
@@ -72,7 +72,7 @@ function load_glossary(filename, course) {
     fetch(filename)
         .then(response => response.json())
         .then(data => {
-            const tbody = document.getElementById('math_table').querySelector('tbody');
+            const tbody = document.getElementById(course).querySelector('tbody');
             tbody.innerHTML = ''; // Clear existing content
             data.forEach(row => {
                 const tr = document.createElement('tr');
