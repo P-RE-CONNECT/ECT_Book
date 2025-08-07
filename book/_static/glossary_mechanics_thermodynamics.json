@@ -2,436 +2,436 @@
     {
         "Symbol":"A",
         "Name":null,
-        "Mechanics and Thermodynamics":"Cross section \/ Area"
+        "Use":"Cross section \/ Area"
     },
     {
         "Symbol":"B",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"C",
         "Name":null,
-        "Mechanics and Thermodynamics":"Specific heat"
+        "Use":"Specific heat"
     },
     {
         "Symbol":"D",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"E",
         "Name":null,
-        "Mechanics and Thermodynamics":"Energy, Young\u2019s modulus"
+        "Use":"Energy, Young\u2019s modulus"
     },
     {
         "Symbol":"F",
         "Name":null,
-        "Mechanics and Thermodynamics":"Force"
+        "Use":"Force"
     },
     {
         "Symbol":"G",
         "Name":null,
-        "Mechanics and Thermodynamics":"Gravitational constant, Gibbs free energy"
+        "Use":"Gravitational constant, Gibbs free energy"
     },
     {
         "Symbol":"H",
         "Name":null,
-        "Mechanics and Thermodynamics":"Enthalpy"
+        "Use":"Enthalpy"
     },
     {
         "Symbol":"I",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"J",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"K",
         "Name":null,
-        "Mechanics and Thermodynamics":"Kelvin"
+        "Use":"Kelvin"
     },
     {
         "Symbol":"L",
         "Name":null,
-        "Mechanics and Thermodynamics":"Angular momentum"
+        "Use":"Angular momentum"
     },
     {
         "Symbol":"M",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"N",
         "Name":null,
-        "Mechanics and Thermodynamics":"Normal force"
+        "Use":"Normal force"
     },
     {
         "Symbol":"O",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"P",
         "Name":null,
-        "Mechanics and Thermodynamics":"Pressure"
+        "Use":"Pressure"
     },
     {
         "Symbol":"Q",
         "Name":null,
-        "Mechanics and Thermodynamics":"Heat"
+        "Use":"Heat"
     },
     {
         "Symbol":"R",
         "Name":null,
-        "Mechanics and Thermodynamics":"Radius"
+        "Use":"Radius"
     },
     {
         "Symbol":"S",
         "Name":null,
-        "Mechanics and Thermodynamics":"Entropy"
+        "Use":"Entropy"
     },
     {
         "Symbol":"T",
         "Name":null,
-        "Mechanics and Thermodynamics":"Period, Temperature"
+        "Use":"Period, Temperature"
     },
     {
         "Symbol":"U",
         "Name":null,
-        "Mechanics and Thermodynamics":"Internal energy"
+        "Use":"Internal energy"
     },
     {
         "Symbol":"V",
         "Name":null,
-        "Mechanics and Thermodynamics":"Volume"
+        "Use":"Volume"
     },
     {
         "Symbol":"W",
         "Name":null,
-        "Mechanics and Thermodynamics":"Work"
+        "Use":"Work"
     },
     {
         "Symbol":"X",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"Y",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"Z",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"a",
         "Name":null,
-        "Mechanics and Thermodynamics":"Acceleration"
+        "Use":"Acceleration"
     },
     {
         "Symbol":"b",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"c",
         "Name":null,
-        "Mechanics and Thermodynamics":"Speed of light"
+        "Use":"Speed of light"
     },
     {
         "Symbol":"d",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"e",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"f",
         "Name":null,
-        "Mechanics and Thermodynamics":"frequency"
+        "Use":"frequency"
     },
     {
         "Symbol":"g",
         "Name":null,
-        "Mechanics and Thermodynamics":"Gravitational acceleration"
+        "Use":"Gravitational acceleration"
     },
     {
         "Symbol":"h",
         "Name":null,
-        "Mechanics and Thermodynamics":"Height"
+        "Use":"Height"
     },
     {
         "Symbol":"I",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"j",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"k",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"l",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"m",
         "Name":null,
-        "Mechanics and Thermodynamics":"Mass"
+        "Use":"Mass"
     },
     {
         "Symbol":"n",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"o",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"p",
         "Name":null,
-        "Mechanics and Thermodynamics":"Momentum, Pressure"
+        "Use":"Momentum, Pressure"
     },
     {
         "Symbol":"q",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"r",
         "Name":null,
-        "Mechanics and Thermodynamics":"Radius"
+        "Use":"Radius"
     },
     {
         "Symbol":"s",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"t",
         "Name":null,
-        "Mechanics and Thermodynamics":"Time"
+        "Use":"Time"
     },
     {
         "Symbol":"u",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"v",
         "Name":null,
-        "Mechanics and Thermodynamics":"Velocity"
+        "Use":"Velocity"
     },
     {
         "Symbol":"w",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"x",
         "Name":null,
-        "Mechanics and Thermodynamics":"Distance"
+        "Use":"Distance"
     },
     {
         "Symbol":"y",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"z",
         "Name":null,
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u0393",
         "Name":"gamma",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u0394",
         "Name":"delta",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u0398",
         "Name":"theta",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u039b",
         "Name":"lambda",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u039e",
         "Name":"xi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03a0",
         "Name":"pi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03a3",
         "Name":"sigma",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03a6",
         "Name":"phi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03a8",
         "Name":"psi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03a9",
         "Name":"omega",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03b1",
         "Name":"alpha",
-        "Mechanics and Thermodynamics":"Angle or radian"
+        "Use":"Angle or radian"
     },
     {
         "Symbol":"\u03b2",
         "Name":"beta",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03b3",
         "Name":"gamma",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03b4",
         "Name":"delta",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03b5",
         "Name":"epsilon",
-        "Mechanics and Thermodynamics":"Strain"
+        "Use":"Strain"
     },
     {
         "Symbol":"\u03b6",
         "Name":"zeta",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03b7",
         "Name":"eta",
-        "Mechanics and Thermodynamics":"Efficiency"
+        "Use":"Efficiency"
     },
     {
         "Symbol":"\u03b8",
         "Name":"theta",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03b9",
         "Name":"iota",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03ba",
         "Name":"kappa",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03bb",
         "Name":"lambda",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03bc",
         "Name":"mu",
-        "Mechanics and Thermodynamics":"Reduced mass"
+        "Use":"Reduced mass"
     },
     {
         "Symbol":"\u03bd",
         "Name":"nu",
-        "Mechanics and Thermodynamics":"Poisson\u2019s ratio"
+        "Use":"Poisson\u2019s ratio"
     },
     {
         "Symbol":"\u03be",
         "Name":"xi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03bf",
         "Name":"omicron",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03c0",
         "Name":"pi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03c1",
         "Name":"rho",
-        "Mechanics and Thermodynamics":"Density"
+        "Use":"Density"
     },
     {
         "Symbol":"\u03c2",
         "Name":"sigma (end variation)",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03c3",
         "Name":"sigma",
-        "Mechanics and Thermodynamics":"Stress"
+        "Use":"Stress"
     },
     {
         "Symbol":"\u03c4",
         "Name":"tau",
-        "Mechanics and Thermodynamics":"Shear stress"
+        "Use":"Shear stress"
     },
     {
         "Symbol":"\u03c5",
         "Name":"upsilon",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03c6",
         "Name":"phi",
-        "Mechanics and Thermodynamics":"Porosity"
+        "Use":"Porosity"
     },
     {
         "Symbol":"\u03c7",
         "Name":"chi",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03c8",
         "Name":"epsilon",
-        "Mechanics and Thermodynamics":null
+        "Use":null
     },
     {
         "Symbol":"\u03c9",
         "Name":"omega",
-        "Mechanics and Thermodynamics":"Angular velocity"
+        "Use":"Angular velocity"
     }
 ]
