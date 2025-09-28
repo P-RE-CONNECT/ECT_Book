@@ -7,11 +7,14 @@
   <style>
     text {
       font-family: sans-serif;
+      text-anchor: middle;
+      alignment-baseline: middle;
     }
 
     html, body {
       margin: 0;
       height: 100%;
+      width: 100%;
     }
     #c {
       width: 100%;
@@ -21,7 +24,8 @@
   </style>
 </head>
 <body>
-  <script src="course_graph.js"></script> 
+  <svg id="course_graph" width="100%" height="100%"></svg>
+	<script src="course_graph.js"></script> 
 </body>
 </html>
 

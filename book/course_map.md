@@ -1,3 +1,3 @@
 # Interactive Course Graph
 
-<iframe src="_static/course_graph.html" width="600" height="300" frameborder="0"></iframe>
+<iframe src="_static/course_graph.html" width="100%" height="1000px" frameborder="0"></iframe>
