@@ -86,6 +86,18 @@ if (svg === null) {
 	console.log("svg is null.");
 }
 
+class LineSVG {
+    constructor(x1, y1, x2, y2, linewidth, color) {
+        this.element = document.createElementNS('http://www.w3.org/2000/svg', "line");
+        this.element.setAttribute('x1', x1); 
+        this.element.setAttribute('y1', y1); 
+        this.element.setAttribute('x2', x2); 
+        this.element.setAttribute('y2', y2); 
+        this.element.setAttribute('stroke', color); 
+        this.element.setAttribute('strokewidth', linewidth); 
+    }
+}
+
 class RectSVG {
 	constructor(color, width, height, x, y) {
 		this.element = document.createElementNS('http://www.w3.org/2000/svg', "rect");
@@ -107,6 +119,13 @@ class TextSVG {
 		this.element.setAttribute("fill", color);
 		this.element.setAttribute("font-size", 11);
 	}
+}
+
+class Arrow {
+    constructor(x1, y1, x2, y2) {
+        this.line_origin = new LineSVG(x1, y1, x1, y1+25, "10px", "black");
+        this.line_end = new LineSVG(x2, y1-25, x2, y1, "10px", "black");
+    }
 }
 
 class Course {
@@ -168,3 +187,6 @@ for (var course of course_data) {
 for (var course of course_list) {
     course.draw(svg);    
 }
+
+const arrow = new ArrowSVG(0, 0, 100, 100, "10px", "black");
+arrow.draw(svg);
