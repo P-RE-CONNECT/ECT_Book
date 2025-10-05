@@ -1,3 +1,5 @@
+const url_svg = 'http://www.w3.org/2000/svg';
+
 const course_data = [
     {
         "id": "Mechanics and Thermodynamics",
@@ -94,7 +96,26 @@ class LineSVG {
         this.element.setAttribute('x2', x2); 
         this.element.setAttribute('y2', y2); 
         this.element.setAttribute('stroke', color); 
-        this.element.setAttribute('strokewidth', linewidth); 
+        this.element.setAttribute('stroke-width', linewidth); 
+    }
+}
+
+class MarkerSVG {
+    constructor(id, refX, refY, markerWidth, markerHeight, orient, color) {
+        this.element = document.createElementNS('http://www.w3.org/2000/svg', "marker");
+        this.element.setAttribute('id', id);
+        this.element.setAttribute('refX', refX);
+        this.element.setAttribute('refY', refY);
+        this.element.setAttribute('markerWidth', markerWidth);
+        this.element.setAttribute('markerHeight', markerHeight);
+        this.element.setAttribute('orient', orient);
+        this.element.setAttribute('markerUnits', 'strokeWidth');
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', "path");
+        path.setAttribute('d', 'M0,0 L4,0 L2,2 Z');
+        path.setAttribute('fill', color);
+
+        this.element.appendChild(path);
     }
 }
 
@@ -123,8 +144,25 @@ class TextSVG {
 
 class Arrow {
     constructor(x1, y1, x2, y2) {
-        this.line_origin = new LineSVG(x1, y1, x1, y1+25, "10px", "black");
-        this.line_end = new LineSVG(x2, y1-25, x2, y1, "10px", "black");
+		this.svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		this.svg.setAttribute("x", 0);
+		this.svg.setAttribute("y", 0);
+		this.svg.setAttribute("width", 2000);
+		this.svg.setAttribute("height", 2000);
+
+        this.marker = new MarkerSVG("arrow", 2, 0, 4, 4, "down", "black");
+
+        this.line_origin = new LineSVG(x1, y1, x1, y1+25, "5px", "black");
+        this.line_end = new LineSVG(x2, y2-25, x2, y2-10, "5px", "black");
+        this.line_end.element.setAttribute("marker-end", "url(#arrow)");
+
+        this.svg.appendChild(this.line_origin.element);
+        this.svg.appendChild(this.line_end.element);
+        this.svg.appendChild(this.marker.element);
+
+    }
+    draw(svg) {
+        svg.appendChild(this.svg);
     }
 }
 
@@ -188,5 +226,5 @@ for (var course of course_list) {
     course.draw(svg);    
 }
 
-const arrow = new ArrowSVG(0, 0, 100, 100, "10px", "black");
+const arrow = new Arrow(50, 50, 350, 100, 3, "black");
 arrow.draw(svg);
