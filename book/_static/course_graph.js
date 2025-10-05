@@ -1,5 +1,4 @@
 const url_svg = 'http://www.w3.org/2000/svg';
-
 const course_data = [
     {
         "id": "Mechanics and Thermodynamics",
@@ -90,7 +89,7 @@ if (svg === null) {
 
 class LineSVG {
     constructor(x1, y1, x2, y2, linewidth, color) {
-        this.element = document.createElementNS('http://www.w3.org/2000/svg', "line");
+        this.element = document.createElementNS(url_svg, "line");
         this.element.setAttribute('x1', x1); 
         this.element.setAttribute('y1', y1); 
         this.element.setAttribute('x2', x2); 
@@ -102,7 +101,7 @@ class LineSVG {
 
 class MarkerSVG {
     constructor(id, refX, refY, markerWidth, markerHeight, orient, color) {
-        this.element = document.createElementNS('http://www.w3.org/2000/svg', "marker");
+        this.element = document.createElementNS(url_svg, "marker");
         this.element.setAttribute('id', id);
         this.element.setAttribute('refX', refX);
         this.element.setAttribute('refY', refY);
@@ -111,7 +110,7 @@ class MarkerSVG {
         this.element.setAttribute('orient', orient);
         this.element.setAttribute('markerUnits', 'strokeWidth');
 
-        const path = document.createElementNS('http://www.w3.org/2000/svg', "path");
+        const path = document.createElementNS(url_svg, "path");
         path.setAttribute('d', 'M0,0 L4,0 L2,2 Z');
         path.setAttribute('fill', color);
 
@@ -121,7 +120,7 @@ class MarkerSVG {
 
 class RectSVG {
 	constructor(color, width, height, x, y) {
-		this.element = document.createElementNS('http://www.w3.org/2000/svg', "rect");
+		this.element = document.createElementNS(url_svg, "rect");
 		this.element.setAttribute("width", width.toString());
 		this.element.setAttribute("height", height.toString());
 		this.element.setAttribute("x", x);
@@ -133,7 +132,7 @@ class RectSVG {
 
 class TextSVG {
 	constructor(text, color, width, height, x, y) {
-		this.element = document.createElementNS('http://www.w3.org/2000/svg', "text");
+		this.element = document.createElementNS(url_svg, "text");
 		this.element.textContent = text;
 		this.element.setAttribute("x", x);
 		this.element.setAttribute("y", y);
@@ -144,7 +143,7 @@ class TextSVG {
 
 class Arrow {
     constructor(x1, y1, x2, y2) {
-		this.svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		this.svg = document.createElementNS(url_svg, "svg");
 		this.svg.setAttribute("x", 0);
 		this.svg.setAttribute("y", 0);
 		this.svg.setAttribute("width", 2000);
@@ -172,7 +171,7 @@ class Course {
 		this.description = description;
 		this.rect = new RectSVG(color, width, height, 0, 0);
 		this.text = new TextSVG(description, "black", 100, 50, 50, 25);
-		this.svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		this.svg = document.createElementNS(url_svg, "svg");
 		this.svg.setAttribute("x", x);
 		this.svg.setAttribute("y", y);
 		this.svg.setAttribute("width", width);
