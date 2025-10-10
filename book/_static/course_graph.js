@@ -2,7 +2,7 @@ const url_svg = 'http://www.w3.org/2000/svg';
 const course_data = [
     {
         "id": "Mechanics and Thermodynamics",
-        "x": 300,
+        "x": 400,
         "y": 0,
         "width": 100,
         "height": 50,
@@ -10,7 +10,7 @@ const course_data = [
     },
     {
         "id": "Calculus",
-        "x": 150,
+        "x": 250,
         "y": 0,
         "width": 100,
         "height": 50,
@@ -18,7 +18,7 @@ const course_data = [
     },
     {
         "id": "Exploring the Grand Challenges",
-        "x": 0,
+        "x": 100,
         "y": 0,
         "width": 100,
         "height": 50,
@@ -26,7 +26,7 @@ const course_data = [
     },
     {
         "id": "Earth and Climate System",
-        "x": 450,
+        "x": 550,
         "y": 0,
         "width": 100,
         "height": 50,
@@ -34,7 +34,7 @@ const course_data = [
     },
     {
         "id": "Chemistry for Earth Sciences",
-        "x": 300,
+        "x": 400,
         "y": 100,
         "width": 100,
         "height": 50,
@@ -42,7 +42,7 @@ const course_data = [
     },
     {
         "id": "Surface, Water and Atmosphere",
-        "x": 450,
+        "x": 550,
         "y": 100,
         "width": 100,
         "height": 50,
@@ -50,7 +50,7 @@ const course_data = [
     },
     {
         "id": "Geodata Fundamentals",
-        "x": 0,
+        "x": 100,
         "y": 100,
         "width": 100,
         "height": 50,
@@ -58,7 +58,7 @@ const course_data = [
     },
     {
         "id": "Linear Algebra",
-        "x": 150,
+        "x": 250,
         "y": 100,
         "width": 100,
         "height": 50,
@@ -66,7 +66,7 @@ const course_data = [
     },
     {
         "id": "EC&T in the Field",
-        "x": 0,
+        "x": 100,
         "y": 200,
         "width": 550,
         "height": 50,
@@ -74,7 +74,7 @@ const course_data = [
     },
     {
         "id": "Earth's Subsurface",
-        "x": 0,
+        "x": 100,
         "y": 300,
         "width": 100,
         "height": 50,
@@ -84,18 +84,18 @@ const course_data = [
 
 const svg = document.getElementById("course_graph");
 if (svg === null) {
-	console.log("svg is null.");
+    console.log("svg is null.");
 }
 
 class LineSVG {
     constructor(x1, y1, x2, y2, linewidth, color) {
         this.element = document.createElementNS(url_svg, "line");
-        this.element.setAttribute('x1', x1); 
-        this.element.setAttribute('y1', y1); 
-        this.element.setAttribute('x2', x2); 
-        this.element.setAttribute('y2', y2); 
-        this.element.setAttribute('stroke', color); 
-        this.element.setAttribute('stroke-width', linewidth); 
+        this.element.setAttribute('x1', x1);
+        this.element.setAttribute('y1', y1);
+        this.element.setAttribute('x2', x2);
+        this.element.setAttribute('y2', y2);
+        this.element.setAttribute('stroke', color);
+        this.element.setAttribute('stroke-width', linewidth);
     }
 }
 
@@ -119,98 +119,96 @@ class MarkerSVG {
 }
 
 class RectSVG {
-	constructor(color, width, height, x, y) {
-		this.element = document.createElementNS(url_svg, "rect");
-		this.element.setAttribute("width", width.toString());
-		this.element.setAttribute("height", height.toString());
-		this.element.setAttribute("x", x);
-		this.element.setAttribute("y", y);
-		this.element.setAttribute("fill", color);
-		this.element.setAttribute("rx", 10);
-	}
+    constructor(color, width, height, x, y) {
+        this.element = document.createElementNS(url_svg, "rect");
+        this.element.setAttribute("width", width.toString());
+        this.element.setAttribute("height", height.toString());
+        this.element.setAttribute("x", x);
+        this.element.setAttribute("y", y);
+        this.element.setAttribute("fill", color);
+        this.element.setAttribute("rx", 10);
+    }
 }
 
 class TextSVG {
-	constructor(text, color, width, height, x, y) {
-		this.element = document.createElementNS(url_svg, "text");
-		this.element.textContent = text;
-		this.element.setAttribute("x", x);
-		this.element.setAttribute("y", y);
-		this.element.setAttribute("fill", color);
-		this.element.setAttribute("font-size", 11);
-	}
+    constructor(text, color, width, height, x, y) {
+        this.element = document.createElementNS(url_svg, "text");
+        this.element.textContent = text;
+        this.element.setAttribute("x", x);
+        this.element.setAttribute("y", y);
+        this.element.setAttribute("fill", color);
+        this.element.setAttribute("font-size", 11);
+    }
 }
 
 class Arrow {
     constructor(x1, y1, x2, y2) {
-		this.svg = document.createElementNS(url_svg, "svg");
-		this.svg.setAttribute("x", 0);
-		this.svg.setAttribute("y", 0);
-		this.svg.setAttribute("width", 2000);
-		this.svg.setAttribute("height", 2000);
+        this.svg = document.createElementNS(url_svg, "svg");
+        this.svg.setAttribute("x", 0);
+        this.svg.setAttribute("y", 0);
+        this.svg.setAttribute("width", 2000);
+        this.svg.setAttribute("height", 2000);
 
         this.marker = new MarkerSVG("arrow", 2, 0, 4, 4, "down", "black");
 
-        this.line_origin = new LineSVG(x1, y1, x1, y1+25, "5px", "black");
-        this.line_end = new LineSVG(x2, y2-25, x2, y2-10, "5px", "black");
+        this.line_origin = new LineSVG(x1, y1, x1, y1 + 27.5, "5px", "black");
+        this.line_end = new LineSVG(x2, y2 - 27.5, x2, y2 - 10, "5px", "black");
         this.line_end.element.setAttribute("marker-end", "url(#arrow)");
 
+        let lines_between = []
+        if (y2 - y1 <= 100) {
+            lines_between.push(new LineSVG(x1 - 2.5, y1 + 25, x2 + 2.5, y2 - 25, "5px", "black"));
+        }
+        else if (x1 > 400) {
+            let offset = 700 - x1;
+            lines_between.push(new LineSVG(x1 + 2.5, y1 + 25, x1 + offset, y1 + 25, "5px", "black"));
+            lines_between.push(new LineSVG(x1 + offset, y1 + 22.5, x1 + offset, y2 - 22.5, "5px", "black"));
+            lines_between.push(new LineSVG(x2 + 2.5, y2 - 25, x1 + offset, y2 - 25, "5px", "black"));
+        }
+        else {
+            let offset = x1 - 50;
+            lines_between.push(new LineSVG(x1 + 2.5, y1 + 25, x1 - offset, y1 + 25, "5px", "black"));
+            lines_between.push(new LineSVG(x1 - offset, y1 + 22.5, x1 - offset, y2 - 22.5, "5px", "black"));
+            lines_between.push(new LineSVG(x2 + 2.5, y2 - 25, x1 - offset, y2 - 25, "5px", "black"));
+        }
+
+        for (var line of lines_between) {
+            this.svg.appendChild(line.element);
+        }
         this.svg.appendChild(this.line_origin.element);
         this.svg.appendChild(this.line_end.element);
         this.svg.appendChild(this.marker.element);
 
     }
+
     draw(svg) {
         svg.appendChild(this.svg);
     }
 }
 
 class Course {
-	constructor(id, description, x, y, width, height, color) {
-		this.id = id;
-		this.description = description;
-		this.rect = new RectSVG(color, width, height, 0, 0);
-		this.text = new TextSVG(description, "black", 100, 50, 50, 25);
-		this.svg = document.createElementNS(url_svg, "svg");
-		this.svg.setAttribute("x", x);
-		this.svg.setAttribute("y", y);
-		this.svg.setAttribute("width", width);
-		this.svg.setAttribute("height", height);
-		this.svg.appendChild(this.rect.element);
-		this.svg.appendChild(this.text.element);
-	}
+    constructor(id, description, x, y, width, height, color) {
+        this.id = id;
+        this.description = description;
+        this.rect = new RectSVG(color, width, height, 0, 0);
+        this.text = new TextSVG(description, "black", 100, 50, 50, 25);
+        this.svg = document.createElementNS(url_svg, "svg");
+        this.svg.setAttribute("x", x);
+        this.svg.setAttribute("y", y);
+        this.svg.setAttribute("width", width);
+        this.svg.setAttribute("height", height);
+        this.svg.appendChild(this.rect.element);
+        this.svg.appendChild(this.text.element);
+    }
 
-	draw(svg) {
-		svg.appendChild(this.svg);
-	}
+    draw(svg) {
+        svg.appendChild(this.svg);
+    }
 }
 
-//
-//const linear = new Course("Linear Algebra", "Linear Algebra", 450, 100);
-//const ect_field = new Course("EC&T in the Field", "EC&T in the Field", 300, 50);
-//
-//const earth_subsurface = new Course("Earth's Subsurface", "Earth's Subsurface", 300, 50);
-//const atmosphere_ocean_dynamics = new Course("Atmosphere and Ocean Dynamics", "Atmosphere and Ocean Dynamics", 300, 50);
-//const signals_timeseries = new Course("Signals and Time Series", "Signals and Time Series", 300, 50);
-//const fluid_dynamics = new Course("Fluid Dynamics", "Fluid Dynamics", 300, 50);
-//const ect_society = new Course("EC&T in Society", "EC&T in Society", 300, 50);
-//const fields_waves = new Course("Fields & Waves", "Fields & Waves", 300, 50);
-//
-//const geology_engineering = new Course("Geology for Engineering", "Geology for Engineering", 300, 50);
-//const climate_environmental = new Course("Climate and Environmental Change", "Climate and Environmental Change", 300, 50);
-//const sensing_spatial = new Course("Sensing and Spatial Analysis", "Sensing and Spatial Analysis", 300, 50);
-//const modelling_simulation = new Course("Modelling and Simulation", "Modelling and Simulation", 300, 50);
-//
-//const field_project = new Course("Field Project", "Field Project", 300, 50);
-//
-//const design_project = new Course("Engineering Design Project", "Engineering Design Project", 300, 50);
-//const elective = new Course("EC&T Elective", "EC&T Elective", 300, 50);
-//const spatiotemporal = new Course("Spatiotemporal Data Analysis", "Spatiotemporal Data Analysis", 300, 50);
-//
-//const thesis = new Course("Bachelor Thesis", "Bachelor Thesis", 300, 50);
-let course_list = [];
+let course_dict = {};
 for (var course of course_data) {
-    course_list.push(new Course(
+    course_dict[course.id] = new Course(
         course.id,
         course.id,
         course.x,
@@ -218,12 +216,12 @@ for (var course of course_data) {
         course.width,
         course.height,
         course.color
-    ))
+    );
 };
 
-for (var course of course_list) {
-    course.draw(svg);    
+for (var key in course_dict) {
+    course_dict[key].draw(svg);
 }
 
-const arrow = new Arrow(50, 50, 350, 100, 3, "black");
+const arrow = new Arrow(600, 50, 600, 100, 3, "black");
 arrow.draw(svg);
