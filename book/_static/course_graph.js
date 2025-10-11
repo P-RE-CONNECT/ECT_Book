@@ -6,7 +6,10 @@ const course_data = [
         "y": 0,
         "width": 100,
         "height": 50,
-        "color": "#fbb800"
+        "color": "#fbb800",
+        "children": [
+            "Chemistry for Earth Sciences"
+        ]
     },
     {
         "id": "Calculus",
@@ -14,7 +17,10 @@ const course_data = [
         "y": 0,
         "width": 100,
         "height": 50,
-        "color": "#fbb800"
+        "color": "#fbb800",
+        "children": [
+            "Linear Algebra"
+        ]
     },
     {
         "id": "Exploring the Grand Challenges",
@@ -22,7 +28,10 @@ const course_data = [
         "y": 0,
         "width": 100,
         "height": 50,
-        "color": "#0b183e"
+        "color": "#0b183e",
+        "children": [
+            "EC&T in the Field"
+        ]
     },
     {
         "id": "Earth and Climate System",
@@ -30,7 +39,10 @@ const course_data = [
         "y": 0,
         "width": 100,
         "height": 50,
-        "color": "#00ae84"
+        "color": "#00ae84",
+        "children": [
+            "Surface, Water and Atmospherer"
+        ]
     },
     {
         "id": "Chemistry for Earth Sciences",
@@ -38,7 +50,9 @@ const course_data = [
         "y": 100,
         "width": 100,
         "height": 50,
-        "color": "#fbb800"
+        "color": "#fbb800",
+        "children": [
+        ]
     },
     {
         "id": "Surface, Water and Atmosphere",
@@ -46,7 +60,9 @@ const course_data = [
         "y": 100,
         "width": 100,
         "height": 50,
-        "color": "#00ae84"
+        "color": "#00ae84",
+        "children": [
+        ]
     },
     {
         "id": "Geodata Fundamentals",
@@ -54,7 +70,9 @@ const course_data = [
         "y": 100,
         "width": 100,
         "height": 50,
-        "color": "#15b6c6"
+        "color": "#15b6c6",
+        "children": [
+        ]
     },
     {
         "id": "Linear Algebra",
@@ -62,7 +80,9 @@ const course_data = [
         "y": 100,
         "width": 100,
         "height": 50,
-        "color": "#fbb800"
+        "color": "#fbb800",
+        "children": [
+        ]
     },
     {
         "id": "EC&T in the Field",
@@ -70,7 +90,9 @@ const course_data = [
         "y": 200,
         "width": 550,
         "height": 50,
-        "color": "#0b183e"
+        "color": "#0b183e",
+        "children": [
+        ]
     },
     {
         "id": "Earth's Subsurface",
@@ -78,7 +100,9 @@ const course_data = [
         "y": 300,
         "width": 100,
         "height": 50,
-        "color": "#00ae84"
+        "color": "#00ae84",
+        "children": [
+        ]
     },
 ]
 
@@ -190,6 +214,10 @@ class Course {
     constructor(id, description, x, y, width, height, color) {
         this.id = id;
         this.description = description;
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
         this.rect = new RectSVG(color, width, height, 0, 0);
         this.text = new TextSVG(description, "black", 100, 50, 50, 25);
         this.svg = document.createElementNS(url_svg, "svg");
@@ -206,6 +234,7 @@ class Course {
     }
 }
 
+// Create courses
 let course_dict = {};
 for (var course of course_data) {
     course_dict[course.id] = new Course(
@@ -219,9 +248,38 @@ for (var course of course_data) {
     );
 };
 
+// Create links (arrows)
+var links = []
+for (var course of course_data) {
+    var x1, y1, x2, y2;
+    var course1 = course_dict[course.id];
+
+    if (!course.children) {
+        continue
+    }
+    for (var course2_id of course.children) {
+        var course2 = course_dict[course2_id];
+        if (!course2) {
+            console.log("key:", course2_id, "not found, did you mistype it?");
+            continue
+        }
+
+        x1 = course1.x + course1.width / 2;
+        y1 = course1.y + course1.height;
+        x2 = course2.x + course2.width / 2;
+        y2 = course2.y;
+
+        links.push(new Arrow(x1, y1, x2, y2));
+    };
+};
+
+
 for (var key in course_dict) {
     course_dict[key].draw(svg);
 }
+for (var link of links) {
+    link.draw(svg);
+}
 
-const arrow = new Arrow(600, 50, 600, 100, 3, "black");
-arrow.draw(svg);
+// const arrow = new Arrow(600, 50, 600, 100, 3, "black");
+// arrow.draw(svg);
