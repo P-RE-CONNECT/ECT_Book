@@ -41,7 +41,7 @@ const course_data = [
         "height": 50,
         "color": "#00ae84",
         "children": [
-            "Surface, Water and Atmospherer"
+            "Surface, Water and Atmosphere"
         ]
     },
     {
@@ -101,6 +101,126 @@ const course_data = [
         "width": 100,
         "height": 50,
         "color": "#00ae84",
+        "children": [
+        ]
+    },
+    {
+        "id": "Earth's Subsurface",
+        "x": 100,
+        "y": 300,
+        "width": 100,
+        "height": 50,
+        "color": "#00ae84",
+        "children": [
+        ]
+    },
+    {
+        "id": "Signals and Time Series",
+        "x": 250,
+        "y": 300,
+        "width": 100,
+        "height": 50,
+        "color": "#15b6c6",
+        "children": [
+        ]
+    },
+    {
+        "id": "Fields and Waves",
+        "x": 400,
+        "y": 300,
+        "width": 100,
+        "height": 50,
+        "color": "#fbb800",
+        "children": [
+        ]
+    },
+    {
+        "id": "Fluid Dynamics",
+        "x": 550,
+        "y": 300,
+        "width": 100,
+        "height": 50,
+        "color": "#fbb800",
+        "children": [
+        ]
+    },
+    {
+        "id": "EC&T in Society",
+        "x": 100,
+        "y": 400,
+        "width": 550,
+        "height": 50,
+        "color": "#0b183e",
+        "children": [
+        ]
+    },
+    {
+        "id": "Climate and Environmental Change",
+        "x": 100,
+        "y": 500,
+        "width": 100,
+        "height": 50,
+        "color": "#00ae84",
+        "children": [
+        ]
+    },
+    {
+        "id": "Geology for Engineering",
+        "x": 250,
+        "y": 500,
+        "width": 100,
+        "height": 50,
+        "color": "#00ae84",
+        "children": [
+        ]
+    },
+    {
+        "id": "Sensing and Spatial Analysis",
+        "x": 400,
+        "y": 500,
+        "width": 100,
+        "height": 50,
+        "color": "#15b6c6",
+        "children": [
+        ]
+    },
+    {
+        "id": "Modelling and Simulation",
+        "x": 550,
+        "y": 500,
+        "width": 100,
+        "height": 50,
+        "color": "#fbb800",
+        "children": [
+        ]
+    },
+    {
+        "id": "Field Project",
+        "x": 100,
+        "y": 600,
+        "width": 550,
+        "height": 50,
+        "color": "#0b183e",
+        "children": [
+        ]
+    },
+    {
+        "id": "Minor",
+        "x": 100,
+        "y": 700,
+        "width": 550,
+        "height": 50,
+        "color": "#eb7350",
+        "children": [
+        ]
+    },
+    {
+        "id": "EC&T Elective",
+        "x": 100,
+        "y": 800,
+        "width": 100,
+        "height": 50,
+        "color": "#eb7350",
         "children": [
         ]
     },
