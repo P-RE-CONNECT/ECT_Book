@@ -224,6 +224,36 @@ const course_data = [
         "children": [
         ]
     },
+    {
+        "id": "Spatiotemporal Geodata Science",
+        "x": 250,
+        "y": 800,
+        "width": 100,
+        "height": 50,
+        "color": "#15b6c6",
+        "children": [
+        ]
+    },
+    {
+        "id": "Engineering Design Project",
+        "x": 400,
+        "y": 800,
+        "width": 100,
+        "height": 50,
+        "color": "#0b183e",
+        "children": [
+        ]
+    },
+    {
+        "id": "Bachelor Thesis",
+        "x": 550,
+        "y": 800,
+        "width": 100,
+        "height": 50,
+        "color": "$007ec5",
+        "children": [
+        ]
+    },
 ]
 
 const svg = document.getElementById("course_graph");
