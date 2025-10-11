@@ -250,7 +250,7 @@ const course_data = [
         "y": 800,
         "width": 100,
         "height": 50,
-        "color": "$007ec5",
+        "color": "#007ec5",
         "children": [
         ]
     },
