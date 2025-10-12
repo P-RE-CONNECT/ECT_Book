@@ -256,6 +256,8 @@ const course_data = [
     },
 ]
 
+selected = ""
+
 const svg = document.getElementById("course_graph");
 if (svg === null) {
     console.log("svg is null.");
@@ -270,6 +272,7 @@ class LineSVG {
         this.element.setAttribute('y2', y2);
         this.element.setAttribute('stroke', color);
         this.element.setAttribute('stroke-width', linewidth);
+
     }
 }
 
@@ -301,6 +304,7 @@ class RectSVG {
         this.element.setAttribute("y", y);
         this.element.setAttribute("fill", color);
         this.element.setAttribute("rx", 10);
+        this.element.setAttribute("stroke-width", "5px");
     }
 }
 
@@ -369,30 +373,6 @@ class Course {
         this.width = width;
         this.height = height;
         this.rect = new RectSVG(color, width, height, 0, 0);
-        this.text = new TextSVG(description, "black", 100, 50, 50, 25);
-        this.svg = document.createElementNS(url_svg, "svg");
-        this.svg.setAttribute("x", x);
-        this.svg.setAttribute("y", y);
-        this.svg.setAttribute("width", width);
-        this.svg.setAttribute("height", height);
-        this.svg.appendChild(this.rect.element);
-        this.svg.appendChild(this.text.element);
-    }
-
-    draw(svg) {
-        svg.appendChild(this.svg);
-    }
-}
-
-class Course2 {
-    constructor(id, description, x, y, width, height, color) {
-        this.id = id;
-        this.description = description;
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.rect = new RectSVG(color, width, height, 0, 0);
 
         this.text = document.createElementNS(url_svg, "foreignObject");
         this.text.setAttribute("x", 5);
@@ -424,6 +404,18 @@ class Course2 {
         this.svg.setAttribute("height", height);
         this.svg.appendChild(this.rect.element);
         this.svg.appendChild(this.text);
+
+        this.svg.addEventListener("mouseover", (e) => {
+            this.rect.element.setAttribute('stroke', 'red');
+        });
+
+        this.svg.addEventListener("mouseleave", (e) => {
+            this.rect.element.setAttribute('stroke', 'transparent');
+        });
+
+        this.svg.addEventListener("click", (e) => {
+            this.rect.element.setAttribute('stroke', 'red');
+        });
     }
 
     draw(svg) {
@@ -434,7 +426,7 @@ class Course2 {
 // Create courses
 let course_dict = {};
 for (var course of course_data) {
-    course_dict[course.id] = new Course2(
+    course_dict[course.id] = new Course(
         course.id,
         course.id,
         course.x,
