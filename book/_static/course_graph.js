@@ -384,10 +384,57 @@ class Course {
     }
 }
 
+class Course2 {
+    constructor(id, description, x, y, width, height, color) {
+        this.id = id;
+        this.description = description;
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.rect = new RectSVG(color, width, height, 0, 0);
+
+        this.text = document.createElementNS(url_svg, "foreignObject");
+        this.text.setAttribute("x", 5);
+        this.text.setAttribute("y", 0);
+        this.text.setAttribute("width", width - 10);
+        this.text.setAttribute("height", height);
+
+        const div = document.createElement("div");
+        div.style.width = "100%";
+        div.style.height = "100%";
+        div.style.fontSize = "11px";
+        div.style.fontFamily = "sans-serif";
+        div.style.alignContent = "center";
+        div.style.textAlign = "center";
+        // Bit of a sin to hardcode this so maybe remove later
+        if (color === "#0b183e") {
+            div.style.color = "white";
+        }
+        else {
+            div.style.color = "black";
+        }
+        div.textContent = description;
+        this.text.appendChild(div)
+
+        this.svg = document.createElementNS(url_svg, "svg");
+        this.svg.setAttribute("x", x);
+        this.svg.setAttribute("y", y);
+        this.svg.setAttribute("width", width);
+        this.svg.setAttribute("height", height);
+        this.svg.appendChild(this.rect.element);
+        this.svg.appendChild(this.text);
+    }
+
+    draw(svg) {
+        svg.appendChild(this.svg);
+    }
+}
+
 // Create courses
 let course_dict = {};
 for (var course of course_data) {
-    course_dict[course.id] = new Course(
+    course_dict[course.id] = new Course2(
         course.id,
         course.id,
         course.x,
