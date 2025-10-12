@@ -365,13 +365,14 @@ class Arrow {
 }
 
 class Course {
-    constructor(id, description, x, y, width, height, color) {
+    constructor(id, description, x, y, width, height, color, children) {
         this.id = id;
         this.description = description;
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        this.children = children;
         this.rect = new RectSVG(color, width, height, 0, 0);
 
         this.text = document.createElementNS(url_svg, "foreignObject");
@@ -414,8 +415,17 @@ class Course {
         });
 
         this.svg.addEventListener("click", (e) => {
-            this.rect.element.setAttribute('stroke', 'red');
+            this.handleClick();
         });
+    }
+    handleClick() {
+        this.rect.element.setAttribute('stroke', 'red');
+
+        for (var arrow of links[this.id]) {
+            for (var subsvg of arrow.svg.children) {
+                subsvg.setAttribute('stroke', 'red');
+            }
+        }
     }
 
     draw(svg) {
@@ -433,19 +443,21 @@ for (var course of course_data) {
         course.y,
         course.width,
         course.height,
-        course.color
+        course.color,
     );
 };
 
 // Create links (arrows)
-var links = []
+let links = {};
 for (var course of course_data) {
-    var x1, y1, x2, y2;
-    var course1 = course_dict[course.id];
-
+    let links_current = []
     if (!course.children) {
         continue
     }
+
+    var x1, y1, x2, y2;
+    var course1 = course_dict[course.id];
+
     for (var course2_id of course.children) {
         var course2 = course_dict[course2_id];
         if (!course2) {
@@ -458,16 +470,18 @@ for (var course of course_data) {
         x2 = course2.x + course2.width / 2;
         y2 = course2.y;
 
-        links.push(new Arrow(x1, y1, x2, y2));
+        links_current.push(new Arrow(x1, y1, x2, y2));
+        links[course.id] = links_current
     };
 };
-
 
 for (var key in course_dict) {
     course_dict[key].draw(svg);
 }
-for (var link of links) {
-    link.draw(svg);
+for (var key in links) {
+    for (var link of links[key]) {
+        link.draw(svg);
+    }
 }
 
 // const arrow = new Arrow(600, 50, 600, 100, 3, "black");
