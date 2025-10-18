@@ -1,4 +1,5 @@
 const url_svg = 'http://www.w3.org/2000/svg';
+
 const course_data = [
     {
         "id": "Mechanics and Thermodynamics",
@@ -19,7 +20,9 @@ const course_data = [
         "height": 50,
         "color": "#fbb800",
         "children": [
-            "Linear Algebra"
+            "Linear Algebra",
+            "Fields and Waves",
+            "Fluid Dynamics"
         ]
     },
     {
@@ -256,7 +259,7 @@ const course_data = [
     },
 ]
 
-selected = ""
+var selected = "Bachelor Thesis";
 
 const svg = document.getElementById("course_graph");
 if (svg === null) {
@@ -273,6 +276,10 @@ class LineSVG {
         this.element.setAttribute('stroke', color);
         this.element.setAttribute('stroke-width', linewidth);
 
+    }
+
+    handleClick() {
+        this.element.stroke = 'red';
     }
 }
 
@@ -292,6 +299,10 @@ class MarkerSVG {
         path.setAttribute('fill', color);
 
         this.element.appendChild(path);
+    }
+
+    handleClick() {
+        this.element.path.fill = 'red';
     }
 }
 
@@ -327,11 +338,12 @@ class Arrow {
         this.svg.setAttribute("width", 2000);
         this.svg.setAttribute("height", 2000);
 
-        this.marker = new MarkerSVG("arrow", 2, 0, 4, 4, "down", "black");
+        let marker_id = `arrow${x1}`;
+        this.marker = new MarkerSVG(marker_id, 2, 0, 4, 4, "down", "black");
 
         this.line_origin = new LineSVG(x1, y1, x1, y1 + 27.5, "5px", "black");
         this.line_end = new LineSVG(x2, y2 - 27.5, x2, y2 - 10, "5px", "black");
-        this.line_end.element.setAttribute("marker-end", "url(#arrow)");
+        this.line_end.element.setAttribute("marker-end", `url(#${marker_id})`);
 
         let lines_between = []
         if (y2 - y1 <= 100) {
@@ -362,6 +374,32 @@ class Arrow {
     draw(svg) {
         svg.appendChild(this.svg);
     }
+
+    handleClick() {
+        for (var svg_child of this.svg.children) {
+            if (svg_child.tagName === "line") {
+                svg_child.setAttribute("stroke", "red");
+            }
+            else if (svg_child.tagName === "marker") {
+                // What needs to be colored in the marker is the <path> tag which is a child of <marker>
+                // Hence children[0].
+                svg_child.children[0].setAttribute("fill", "red");
+            }
+        }
+    }
+
+    handleUnclick() {
+        for (var svg_child of this.svg.children) {
+            if (svg_child.tagName === "line") {
+                svg_child.setAttribute("stroke", "black");
+            }
+            else if (svg_child.tagName === "marker") {
+                // What needs to be colored in the marker is the <path> tag which is a child of <marker>
+                // Hence children[0].
+                svg_child.children[0].setAttribute("fill", "black");
+            }
+        }
+    }
 }
 
 class Course {
@@ -373,7 +411,9 @@ class Course {
         this.width = width;
         this.height = height;
         this.children = children;
-        this.rect = new RectSVG(color, width, height, 0, 0);
+        this.color = color;
+
+        this.rect = new RectSVG(this.color, width, height, 0, 0);
 
         this.text = document.createElementNS(url_svg, "foreignObject");
         this.text.setAttribute("x", 5);
@@ -407,23 +447,36 @@ class Course {
         this.svg.appendChild(this.text);
 
         this.svg.addEventListener("mouseover", (e) => {
-            this.rect.element.setAttribute('stroke', 'red');
+            this.rect.element.setAttribute('fill', 'red');
         });
 
         this.svg.addEventListener("mouseleave", (e) => {
-            this.rect.element.setAttribute('stroke', 'transparent');
+            this.rect.element.setAttribute('fill', this.color);
         });
 
         this.svg.addEventListener("click", (e) => {
+            course_dict[selected].handleUnclick();
+            selected = this.id;
             this.handleClick();
         });
     }
+
     handleClick() {
         this.rect.element.setAttribute('stroke', 'red');
 
-        for (var arrow of links[this.id]) {
-            for (var subsvg of arrow.svg.children) {
-                subsvg.setAttribute('stroke', 'red');
+        if (links[this.id]) {
+            for (var arrow of links[this.id]) {
+                arrow.handleClick();
+            }
+        }
+    }
+
+    handleUnclick() {
+        this.rect.element.setAttribute('stroke', 'transparent');
+
+        if (links[this.id]) {
+            for (var arrow of links[this.id]) {
+                arrow.handleUnclick();
             }
         }
     }
