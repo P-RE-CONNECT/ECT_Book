@@ -99,17 +99,7 @@ const course_data = [
     },
     {
         "id": "Earth's Subsurface",
-        "x": 100,
-        "y": 300,
-        "width": 100,
-        "height": 50,
-        "color": "#00ae84",
-        "children": [
-        ]
-    },
-    {
-        "id": "Earth's Subsurface",
-        "x": 100,
+        "x": 550,
         "y": 300,
         "width": 100,
         "height": 50,
@@ -119,7 +109,7 @@ const course_data = [
     },
     {
         "id": "Signals and Time Series",
-        "x": 250,
+        "x": 100,
         "y": 300,
         "width": 100,
         "height": 50,
@@ -139,7 +129,7 @@ const course_data = [
     },
     {
         "id": "Fluid Dynamics",
-        "x": 550,
+        "x": 250,
         "y": 300,
         "width": 100,
         "height": 50,
@@ -159,7 +149,7 @@ const course_data = [
     },
     {
         "id": "Climate and Environmental Change",
-        "x": 100,
+        "x": 400,
         "y": 500,
         "width": 100,
         "height": 50,
@@ -169,7 +159,7 @@ const course_data = [
     },
     {
         "id": "Geology for Engineering",
-        "x": 250,
+        "x": 550,
         "y": 500,
         "width": 100,
         "height": 50,
@@ -179,7 +169,7 @@ const course_data = [
     },
     {
         "id": "Sensing and Spatial Analysis",
-        "x": 400,
+        "x": 100,
         "y": 500,
         "width": 100,
         "height": 50,
@@ -189,7 +179,7 @@ const course_data = [
     },
     {
         "id": "Modelling and Simulation",
-        "x": 550,
+        "x": 250,
         "y": 500,
         "width": 100,
         "height": 50,
@@ -219,7 +209,7 @@ const course_data = [
     },
     {
         "id": "EC&T Elective",
-        "x": 100,
+        "x": 250,
         "y": 800,
         "width": 100,
         "height": 50,
@@ -229,7 +219,7 @@ const course_data = [
     },
     {
         "id": "Spatiotemporal Geodata Science",
-        "x": 250,
+        "x": 100,
         "y": 800,
         "width": 100,
         "height": 50,
@@ -319,17 +309,6 @@ class RectSVG {
     }
 }
 
-class TextSVG {
-    constructor(text, color, width, height, x, y) {
-        this.element = document.createElementNS(url_svg, "text");
-        this.element.textContent = text;
-        this.element.setAttribute("x", x);
-        this.element.setAttribute("y", y);
-        this.element.setAttribute("fill", color);
-        this.element.setAttribute("font-size", 11);
-    }
-}
-
 class Arrow {
     constructor(x1, y1, x2, y2) {
         this.svg = document.createElementNS(url_svg, "svg");
@@ -415,10 +394,12 @@ class Course {
 
         this.rect = new RectSVG(this.color, width, height, 0, 0);
 
+        let x_offset = 5;
+
         this.text = document.createElementNS(url_svg, "foreignObject");
-        this.text.setAttribute("x", 5);
+        this.text.setAttribute("x", x_offset);
         this.text.setAttribute("y", 0);
-        this.text.setAttribute("width", width - 10);
+        this.text.setAttribute("width", width - 2 * x_offset);
         this.text.setAttribute("height", height);
 
         const div = document.createElement("div");
@@ -428,6 +409,7 @@ class Course {
         div.style.fontFamily = "sans-serif";
         div.style.alignContent = "center";
         div.style.textAlign = "center";
+
         // Bit of a sin to hardcode this so maybe remove later
         if (color === "#0b183e") {
             div.style.color = "white";
@@ -435,6 +417,7 @@ class Course {
         else {
             div.style.color = "black";
         }
+
         div.textContent = description;
         this.text.appendChild(div)
 

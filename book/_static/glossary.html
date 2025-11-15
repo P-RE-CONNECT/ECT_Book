@@ -28,6 +28,14 @@
             background-color: #2d4bc2;
             border-color: #1432aa;
         }
+
+        input {
+            margin-bottom: 20px;
+            padding: 8px;
+            font-size: 16px;
+            border-color: #1432aa;
+        }
+
         div {
             height: 100em;
         }
@@ -40,11 +48,12 @@
         <option value="glossary/1">Mechanics and Thermodynamics</option>
     </select>
 
+    <input type="text" id="search" onkeyup="filterTable()" placeholder="Search...">
+
     <table id="math_table" style="display: table;">
         <thead>
             <tr>
                 <th>Symbol</th>
-                <th>Name</th>
                 <th>Use</th>
             </tr>
         </thead>
@@ -57,7 +66,6 @@
         <thead>
             <tr>
                 <th>Symbol</th>
-                <th>Name</th>
                 <th>Use</th>
             </tr>
         </thead>
