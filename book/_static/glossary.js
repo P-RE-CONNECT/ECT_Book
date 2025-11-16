@@ -34,23 +34,23 @@ load_glossary('glossary_mechanics_thermodynamics.json', 'mechanics_thermodynamic
 document.getElementById('glossary-select').addEventListener('change', function() {
     var selectedValue = this.value;
 
-    var math_table = document.getElementById('math_table');
-    var mechanics_thermodynamics = document.getElementById('mechanics_thermodynamics');
+    function switch_table(new_table) {
+        currently_visible = document.getElementById(visible_table);
+        currently_visible.style.display = 'none';
+        new_visible = document.getElementById(new_table);
+        new_visible.style.display = 'table';
+        visible_table = new_table;
+    }
 
     switch (selectedValue) {
-        case 'glossary/1':
-            visible_table = "mechanics_thermodynamics"
-            mechanics_thermodynamics.style.display = 'table';
-            math_table.style.display = 'none';
+        case 'mechanics_thermodynamics':
+            switch_table("mechanics_thermodynamics");
             break;
         case 'math':
-            visible_table = "math_table"
-            math_table.style.display = 'table';
-            mechanics_thermodynamics.style.display = 'none';
+            switch_table("math_table");
             break;
         default:
-            mechanics_thermodynamics.style.display = 'none';
-            math_table.style.display = 'table';
+            switch_table("math_table");
     }
 });
 
