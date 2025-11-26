@@ -1,4 +1,3 @@
 # Interactive Glossary
 
-```{iframe} ../_static/glossary.html
-```
+<iframe src="../_static/glossary.html" width="100%" height="500px"></iframe>
