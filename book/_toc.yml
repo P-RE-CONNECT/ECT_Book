@@ -66,6 +66,7 @@ parts:
         - file: physics_chemistry/chemistry/summary.md
         - file: physics_chemistry/chemistry/diag_test.md
         - file: physics_chemistry/chemistry/practice_exercises.md
+        - file: physics_chemistry/chemistry/Carbonate_Gas.ipynb
 
   - caption: Miscellaneous
     chapters:
